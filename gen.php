@@ -3,7 +3,7 @@ $sourceBaseDir = __DIR__ . '/core/public';
 $distBaseDir   = __DIR__ . '/dist';
 
 $it = new RecursiveDirectoryIterator($sourceBaseDir, RecursiveDirectoryIterator::SKIP_DOTS);
-$files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::LEAF_ONLY);
+$files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::LEAVES_ONLY);
 
 foreach ($files as $file) {
     if ($file->getExtension() !== 'php') continue;
