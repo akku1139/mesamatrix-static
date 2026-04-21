@@ -23,13 +23,14 @@ return [
         "title" => "The Mesa drivers matrix",
         "description" => "Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.",
         "xml_file" => "public/features.xml",
-        "project_url" => "https://github.com/MightyCreak/mesamatrix",
+        "project_url" => "https://github.com/akku1139/mesamatrix-static",
         "commitlog_length" => 10,
         "authors" => array(
             // Either '$author' or '$author => $website'
             "Romain 'Creak' Failliot",
             "Tobias Droste",
             "Robin McCorkell",
+            "Akari Tsuyukusa",
         ),
         "private_dir" => "private",
     ],
