@@ -111,7 +111,7 @@ abstract class BaseController
 
         <title>{$projectTitle}</title>
 
-        <meta property="og:title" content="Mesamatrix: {$projectTitle}" />
+        <meta property="og:title" content="Mesamatrix-Static: {$projectTitle}" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="//mesamatrix.net/images/mesamatrix-logo.png" />
 
@@ -135,7 +135,7 @@ HTML;
     </head>
     <body>
         <header>
-            <a href="."><img src="images/banner.svg" class="banner" alt="Mesamatrix banner" /></a>
+            <a href="."><img src="images/banner.svg" class="banner" alt="Mesamatrix banner" /> - Static Edition</a>
 
             <div class="menu">
                 <ul class="menu-list">
