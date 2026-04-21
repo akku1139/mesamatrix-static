@@ -51,7 +51,7 @@ jobs:
           cd ..
           sync_repo dist https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b dist"
           cd dist
-          git rm . -r
+          git rm . -r || true
           git clean -ffdx
           cp -r ../core/public/. .
           cd ..
