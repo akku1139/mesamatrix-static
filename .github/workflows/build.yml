@@ -36,7 +36,7 @@ jobs:
           function sync_repo() {
             if [ -d "$1" ]; then
               pushd "$1"
-              git pull
+              git pull || git fetch
               popd
             else
               git clone "$2" $3 "$1"
@@ -55,10 +55,15 @@ jobs:
           git clean -ffdx
           cp -r ../core/public/. .
           cd ..
+          ls -lh *
+
+      - name: parse
+        run: |
+          cd core
+          ./mesamatrixctl parse
 
       - name: build
         run: |
-          core/scripts/cron.sh
           php gen.php
           cd dist
           ln -s index.php.html index.html
