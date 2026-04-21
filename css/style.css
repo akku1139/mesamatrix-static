@@ -1,0 +1,543 @@
+/*
+ * This file is part of mesamatrix.
+ *
+ * Copyright (C) 2014-2022 Romain "Creak" Failliot.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/* Minified Normalize.css: https://necolas.github.io/normalize.css/ */
+html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type="button"],[type="reset"],[type="submit"],button{-webkit-appearance:button}[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
+
+/* minified box-sizing best practice: https://css-tricks.com/box-sizing/ */
+html{box-sizing:border-box}*,*:after,*:before{box-sizing:inherit}
+
+body {
+    --text-color: #222;
+    --bkg-color: #fff;
+    --anchor-color: #0033cc;
+    --visited-anchor-color: #8282d2;
+
+    --lb-bkg-color: #d3d7cf;
+    --lb-same-rank-color: #9e9e9e;
+    --lb-1st-color: rgba(195, 255, 155, 1.00);
+    --lb-2nd-color: rgba(195, 255, 155, 0.67);
+    --lb-3rd-color: rgba(195, 255, 155, 0.33);
+    --lb-pct-score-color: rgb(120, 120, 120);
+
+    --matrix-ext-default-color: var(--lb-bkg-color);
+    --matrix-ext-hover-color: #ededed;
+
+    --matrix-ext-amd-color: #f7b5b2;
+    --matrix-ext-apple-color: #a2a2a2;
+    --matrix-ext-arm-color: #7acde8;
+    --matrix-ext-broadcom-color: #ff8e8e;
+    --matrix-ext-intel-color: #b9cee4;
+    --matrix-ext-nvidia-color: #d5f796;
+    --matrix-ext-powervr-color: #c48dd1;
+    --matrix-ext-qualcomm-color: #c7dce8;
+    --matrix-ext-software-color: var(--matrix-ext-default-color);
+    --matrix-ext-translation-color: #ffd6fc;
+    --matrix-ext-vivante-color: #a6d87a;
+
+    /* donation */
+    --donate-text-color: #333;
+    --donate-bg-color: rgb(209, 218, 255);
+}
+
+/* Dark theme OS override */
+body.dark-theme {
+    --text-color: #cfcfcf;
+    --bkg-color: #3b3b3b;
+    --anchor-color: #809fff;
+    --visited-anchor-color: #8282d2;
+
+    --lb-bkg-color: #2f2f2f;
+    --lb-same-rank-color: #9e9e9e;
+    --lb-1st-color: rgb(90, 133, 55);
+    --lb-2nd-color: rgba(90, 133, 55, 0.67);
+    --lb-3rd-color: rgba(90, 133, 55, 0.33);
+    --lb-pct-score-color: rgb(163, 163, 163);
+
+    --matrix-ext-default-color: var(--lb-bkg-color);
+    --matrix-ext-hover-color: #535353;
+
+    --matrix-ext-amd-color: #9e7371;
+    --matrix-ext-apple-color: #8a8a8a;
+    --matrix-ext-arm-color: #497b8b;
+    --matrix-ext-broadcom-color: #a15959;
+    --matrix-ext-intel-color: #667280;
+    --matrix-ext-nvidia-color: #798f52;
+    --matrix-ext-powervr-color: #8f4e9e;
+    --matrix-ext-qualcomm-color: #77848b;
+    --matrix-ext-software-color: var(--matrix-ext-default-color);
+    --matrix-ext-vivante-color: #638148;
+    --matrix-ext-translation-color: #8f778d;
+
+    /* donation */
+    --donate-text-color: #dddddd;
+    --donate-bg-color: rgb(83, 89, 115);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --text-color: #cfcfcf;
+        --bkg-color: #3b3b3b;
+        --anchor-color: #809fff;
+        --visited-anchor-color: #8282d2;
+
+        --lb-bkg-color: #2f2f2f;
+        --lb-same-rank-color: #9e9e9e;
+        --lb-1st-color: rgb(90, 133, 55);
+        --lb-2nd-color: rgba(90, 133, 55, 0.67);
+        --lb-3rd-color: rgba(90, 133, 55, 0.33);
+        --lb-pct-score-color: rgb(163, 163, 163);
+
+        --matrix-ext-default-color: var(--lb-bkg-color);
+        --matrix-ext-hover-color: #535353;
+
+        --matrix-ext-amd-color: #9e7371;
+        --matrix-ext-apple-color: #8a8a8a;
+        --matrix-ext-arm-color: #497b8b;
+        --matrix-ext-broadcom-color: #a15959;
+        --matrix-ext-intel-color: #667280;
+        --matrix-ext-nvidia-color: #798f52;
+        --matrix-ext-powervr-color: #8f4e9e;
+        --matrix-ext-qualcomm-color: #77848b;
+        --matrix-ext-software-color: var(--matrix-ext-default-color);
+        --matrix-ext-translation-color: #8f778d;
+        --matrix-ext-vivante-color: #638148;
+
+        /* donation */
+        --donate-text-color: #dddddd;
+        --donate-bg-color: rgb(83, 89, 115);
+    }
+
+    /* Light theme OS override */
+    body.light-theme {
+        --text-color: #222;
+        --bkg-color: #fff;
+        --anchor-color: #0033cc;
+        --visited-anchor-color: #8282d2;
+
+        --lb-bkg-color: #d3d7cf;
+        --lb-same-rank-color: #9e9e9e;
+        --lb-1st-color: rgba(195, 255, 155, 1.00);
+        --lb-2nd-color: rgba(195, 255, 155, 0.67);
+        --lb-3rd-color: rgba(195, 255, 155, 0.33);
+        --lb-pct-score-color: rgb(120, 120, 120);
+
+        --matrix-ext-default-color: var(--lb-bkg-color);
+        --matrix-ext-hover-color: #ededed;
+
+        --matrix-ext-amd-color: #f7b5b2;
+        --matrix-ext-apple-color: #a2a2a2;
+        --matrix-ext-arm-color: #7acde8;
+        --matrix-ext-broadcom-color: #ff8e8e;
+        --matrix-ext-intel-color: #b9cee4;
+        --matrix-ext-nvidia-color: #d5f796;
+        --matrix-ext-powervr-color: #c48dd1;
+        --matrix-ext-qualcomm-color: #c7dce8;
+        --matrix-ext-software-color: var(--matrix-ext-default-color);
+        --matrix-ext-translation-color: #ffd6fc;
+        --matrix-ext-vivante-color: #a6d87a;
+
+        /* donation */
+        --donate-text-color: #333;
+        --donate-bg-color: rgb(209, 218, 255);
+    }
+}
+
+body {
+    font-family: 'Liberation Sans', 'Arial', sans-serif;
+    background-color: var(--bkg-color);
+    color: var(--text-color);
+    margin: 0 2em 2em 2em;
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--anchor-color);
+}
+a:visited{
+    color: var(--visited-anchor-color);
+}
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+header img.banner {
+    width: 663px;
+    height: 132px;
+}
+
+main p {
+    max-width: 1000px;
+}
+
+.commits th                         { text-align: left; }
+.commits td                         { vertical-align: top; }
+.commits .commitsAge                {
+    white-space: nowrap;
+    padding-right: 1em;
+}
+.commits .commitsAge::first-letter  { text-transform: uppercase; }
+
+.lb                             { font-size: 85%; border-collapse: collapse; border-spacing: 0; }
+.lb th, .lb td                  { padding: 0.25em 0.5em; }
+.lb th                          { background-color: var(--lb-bkg-color); }
+.lb td                          { border: 1px solid var(--lb-bkg-color); }
+.lbCol-rank                     { text-align: center; }
+.lbCol-rank-same                { color: var(--lb-same-rank-color); }
+.lbCol-driver                   { min-width: 16em; }
+.lbCol-score, .lbCol-version    { text-align: right; min-width: 8em; }
+.lbCol-pctScore                 { font-size: 0.8em; color: var(--lb-pct-score-color); }
+.lbCol-1st td                   { background-color: var(--lb-1st-color); }
+.lbCol-2nd td                   { background-color: var(--lb-2nd-color); }
+.lbCol-3rd td                   { background-color: var(--lb-3rd-color); }
+
+/**
+ * Matrix table
+ */
+
+details {
+    display: inline;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+details > summary {
+    margin-left: 0.3em;
+    font-size: x-large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.matrix {
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+
+.hCellHeader {
+    font-size: 85%;
+    min-width: 4.1em;
+    padding: 0.2em;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+}
+
+.hCellDriverScore {
+    font-size: 85%;
+    font-weight: bold;
+    color: #DDDDDD;
+    cursor: default;
+}
+
+.hCellDriverScore-done { color: #99D75F; }
+.hCellDriverScore-almost { color: #E1A25E; }
+.hCellDriverScore-notyet { color: #B94B3D; }
+
+.hCellVendor-default        { background-color: var(--matrix-ext-default-color); }
+.hCellVendor-amd            { background-color: var(--matrix-ext-amd-color); }
+.hCellVendor-apple          { background-color: var(--matrix-ext-apple-color); }
+.hCellVendor-arm            { background-color: var(--matrix-ext-arm-color); }
+.hCellVendor-broadcom       { background-color: var(--matrix-ext-broadcom-color); }
+.hCellVendor-intel          { background-color: var(--matrix-ext-intel-color); }
+.hCellVendor-nvidia         { background-color: var(--matrix-ext-nvidia-color); }
+.hCellVendor-powervr        { background-color: var(--matrix-ext-powervr-color); }
+.hCellVendor-qualcomm       { background-color: var(--matrix-ext-qualcomm-color); }
+.hCellVendor-software       { background-color: var(--matrix-ext-software-color); }
+.hCellVendor-translation    { background-color: var(--matrix-ext-translation-color); }
+.hCellVendor-vivante        { background-color: var(--matrix-ext-vivante-color); }
+
+.hCellSep       { width: 0px; }
+
+.permalink { margin-left: 0.3em; visibility: hidden; }
+.permalink:link { text-decoration: none; color: #DDDDDD; }
+.permalink:visited { text-decoration: none; color: #DDDDDD; }
+:hover > .permalink { visibility: visible; }
+
+.extension {
+    font-size: 85%;
+}
+.extension > td.hover {
+    opacity: 0.75;
+}
+.extension > td:first-of-type {
+    min-width: 32em;
+}
+.extension > td:first-of-type.hover {
+    background-color: var(--matrix-ext-hover-color);
+    opacity: 1.0;
+}
+
+.extension-child { padding-left: 1em; }
+
+.task {
+    position: relative;
+    padding-right: 4px;
+    height: 1.3em;
+    padding: 0;
+    cursor: default;
+    text-align: center;
+}
+.task span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font: 0.7em sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.isDone { background-color: #A7E969; }
+.isInProgress { background-color: #E99D4A; }
+.isNotStarted { background-color: #D55E4F; }
+
+.footnote.task {
+    padding: 0;
+    cursor: help;
+}
+.footnote.isDone {
+    background: repeating-linear-gradient(45deg, #A7E969, #A7E969 10px, #97C86A 10px, #97C86A 20px);
+}
+.footnote.isInProgress {
+    background: repeating-linear-gradient(45deg, #E99D4A, #E99D4A 10px, #C9853F 10px, #C9853F 20px);
+}
+.footnote.isNotStarted {
+    background: repeating-linear-gradient(45deg, #D86758, #D86758 10px, #AA574C 10px, #AA574C 20px);
+}
+
+/**
+ * Menu
+ * Inspired from http://purecss.io/menus/
+ */
+.menu {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.menu > ul,
+.menu > ul > li {
+    position: relative;
+}
+.menu > ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu > ul > li {
+    margin: 0 0.3em 0 0;
+    padding: 0;
+    align-self: center;
+}
+.menu > ul > li > a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #777;
+}
+.menu > ul > li > a:hover,
+.menu > ul > li > a:focus {
+    background-color: #eee;
+}
+.menu > ul .menu-selected > a {
+    background-color: #ddd;
+}
+.menu > ul .menu-selected > a,
+.menu > ul .menu-selected > a:visited {
+    color: #333;
+}
+.menu > ul > li > .rss {
+    margin: 0;
+    padding: 0 0.5em;
+}
+.menu > ul > li > a:hover.rss {
+    background-color: transparent;
+}
+.menu > ul > li > .rss > img {
+    vertical-align: middle;
+    width: 32px;
+    height: 32px;
+}
+
+/* Highlight the donation page in the menu */
+.menu > ul > li:nth-child(3) > a {
+    border-radius: 5px;
+    color: var(--donate-text-color);
+    background-color: var(--donate-bg-color);
+}
+
+#github-ribbon > img {
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: 0;
+}
+
+/* Simple CSS for toggle switch */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 40px;
+}
+
+.theme-switch-wrapper input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider::before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 18px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+}
+
+input:checked + .slider {
+    background-color: #66bb6a;
+}
+
+input:checked + .slider::before {
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 12px;
+}
+
+.slider.round::before {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1400px) {
+    #github-ribbon {
+        display: none;
+    }
+}
+
+/**
+ * CSS for the donation page.
+ */
+
+.contributor-container {
+    display: flex;
+    margin: 0 -1rem;
+}
+.contributor-item {
+    flex: 1 1 50%;
+    padding: 0 1rem;
+}
+
+.contributor-list > h2 .subtitle {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+.contributor-list > h3 {
+    margin: 0.5em 0 0.5em 0;
+}
+.contributor-list > table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.contributor-list > table .contributor-rank {
+    width: 1.5em;
+    text-align: left;
+}
+.contributor-list > table .contributor-name {
+    text-align: left;
+}
+.contributor-list > table .contributor-date,
+.contributor-list > table .contributor-total {
+    width: 7em;
+    text-align: right;
+}
+.contributor-list > table .contributor-donation,
+.contributor-list > table .contributor-total-donation {
+    width: 7em;
+    text-align: right;
+}
+.contributor-list > table .contributor-total-donation {
+    font-weight: bold;
+}
+
+.contributor-list > table .contributor-total-label {
+    font-weight: bold;
+    text-align: right;
+}
+
+.donate {
+    border-radius: 0.7em;
+    background-color: var(--donate-bg-color);
+    color: var(--donate-text-color);
+    padding: 1.17em;
+}
+
+.donate :first-child {
+    margin-top: 0;
+}
+
+.donate :last-child {
+    margin-bottom: 0;
+}
+
+.donate > form {
+    margin: 2em;
+    max-width: 400px;
+}
+
+.donate > form .input-row {
+    margin: 0.6em 0 0.2em 0;
+}
+
+.donate > form .input-row input[type=text] {
+    display: block;
+    width: 100%;
+    margin: 0.2em 0;
+}
+
+.donate > form .submit {
+    margin-top: 1em;
+    text-align: right;
+}
+
+.github-fork-ribbon:before {
+    background-color: #f80;
+}
