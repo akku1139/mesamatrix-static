@@ -72,7 +72,7 @@ jobs:
 
           find "$SOURCE_BASE_DIR" -type f -name "*.php" | while read -r SOURCE_PATH; do
             RELATIVE_PATH="${SOURCE_PATH#$SOURCE_BASE_DIR}"
-            TARGET_HTML_PATH="${DIST_BASE_DIR}${RELATIVE_PATH%.php}.html"
+            TARGET_HTML_PATH="${DIST_BASE_DIR}${RELATIVE_PATH}.html"
 
             mkdir -p "$(dirname "$TARGET_HTML_PATH")"
             echo -n "Rendering: $RELATIVE_PATH ... "
