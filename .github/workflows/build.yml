@@ -1,0 +1,81 @@
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '24 4 * * *'
+
+concurrency:
+  group: main
+
+permissions:
+  contents: write
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Cache Composer packages
+        id: composer-cache
+        run: |
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v5
+        with:
+          path: |
+            .
+            ${{ steps.composer-cache.outputs.dir }}
+          restore-keys: cache-
+          key: cache-${{ github.sha }}
+
+      - name: setup
+        run: |
+          # $1 path
+          # $2 url
+          # $3 clone args (extracted)
+          function sync_repo() {
+            if [ -d "$1" ]; then
+              pushd "$1"
+              git pull
+              popd
+            else
+              git clone "$2" $3 "$1"
+            fi
+          }
+
+          sync_repo core https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b main"
+          cd core
+          sync_repo private https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b data"
+          sync_repo mesa.git https://github.com/external-mirrors/mesa "--bare -b main"
+          composer install --no-dev
+          cd ..
+          sync_repo dist https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b dist"
+          cd dist
+          git rm . -r
+          git clean -ffdx
+          cp -r ../core/public/. .
+          cd ..
+
+      - name: build
+        run: |
+          core/scripts/cron.sh
+          php gen.php
+          cd dist
+          ln -s index.php.html index.html
+
+      - run: |
+          function save() {
+            pushd "$1"
+            if [ -n "$(git status --porcelain)" ]; then
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add -A
+              git pull
+              git commit -m "build"
+              git push
+            fi
+            popd
+          }
+
+          save core/private
+          save dist
