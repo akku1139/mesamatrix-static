@@ -67,7 +67,28 @@ jobs:
 
       - name: build
         run: |
-          php gen.php
+          SOURCE_BASE_DIR="$(pwd)/core/public"
+          DIST_BASE_DIR="$(pwd)/dist"
+
+          find "$SOURCE_BASE_DIR" -type f -name "*.php" | while read -r SOURCE_PATH; do
+            RELATIVE_PATH="${SOURCE_PATH#$SOURCE_BASE_DIR}"
+            TARGET_HTML_PATH="${DIST_BASE_DIR}${RELATIVE_PATH%.php}.html"
+
+            mkdir -p "$(dirname "$TARGET_HTML_PATH")"
+            echo -n "Rendering: $RELATIVE_PATH ... "
+            (
+              cd "$(dirname "$SOURCE_PATH")" || exit
+              php "$(basename "$SOURCE_PATH")" > "$TARGET_HTML_PATH"
+            )
+            if [ $? -eq 0 ]; then
+              echo "Saved"
+            else
+              echo "Error!"
+            fi
+          done
+          echo -e "\nBuild Finished."
+  
+      - run: |
           cd dist
           ln -s index.php.html index.html
 
