@@ -46,7 +46,9 @@ jobs:
           sync_repo core https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b main"
           cd core
           sync_repo private https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b data"
+          cd private
           sync_repo mesa.git https://github.com/external-mirrors/mesa "--bare -b main"
+          cd ..
           composer install --no-dev
           cd ..
           sync_repo dist https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b dist"
