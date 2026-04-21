@@ -3,6 +3,7 @@
 on:
   push:
     branches:
+      - runner
       - main
   workflow_dispatch:
   schedule:
@@ -95,11 +96,10 @@ jobs:
           done
           echo -e "\nBuild Finished."
   
-      - run: |
-          cd dist
-          ln -s index.php.html index.html
+      - run: cd dist && ln -s index.php.html index.html
 
-      - run: |
+      - name: Save
+        run: |
           function save() {
             pushd "$1"
             if [ -n "$(git status --porcelain)" ]; then
