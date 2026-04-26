@@ -103,6 +103,7 @@ jobs:
           set -x
           function save() {
             pushd "$1"
+            git status
             git add -A
             if [ -n "$(git status --porcelain)" ]; then
               git config user.name "github-actions[bot]"
