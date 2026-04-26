@@ -55,7 +55,7 @@ jobs:
           cd core
           sync_repo private https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b data"
           cd private
-          sync_repo mesa.git https://github.com/external-mirrors/mesa "--mirror -b main"
+          sync_repo mesa.git https://github.com/external-mirrors/mesa "--mirror"
           cd ..
           composer install --no-dev
           cd ..
