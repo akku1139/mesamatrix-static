@@ -5,6 +5,67 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: Advertise VK_EXT_dynamic_rendering_unused_attachments]]></title>
+      <link>http://:?commit=aed60946a117167810b73ec13f1ada5fbd0e8ac3</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 3db91cc9231..c96f3b0ca39 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -633,7 +633,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_discard_rectangles                             DONE (nvk, radv)
+   VK_EXT_display_control                                DONE (anv, hasvk, nvk, panvk, radv, tu)
+   VK_EXT_display_surface_counter                        DONE (anv, lvp, nvk, panvk, radv, tu, vn)
+-  VK_EXT_dynamic_rendering_unused_attachments           DONE (anv, hk, lvp, nvk, radv, tu, vn)
++  VK_EXT_dynamic_rendering_unused_attachments           DONE (anv, hk, lvp, nvk, panvk, radv, tu, vn)
+   VK_EXT_extended_dynamic_state3                        DONE (anv, hk, lvp, nvk, pvr, radv, tu, vn)
+   VK_EXT_external_memory_acquire_unmodified             DONE (anv, panvk, radv, vn)
+   VK_EXT_external_memory_dma_buf                        DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=aed60946a117167810b73ec13f1ada5fbd0e8ac3</guid>
+      <pubDate>Fri, 24 Apr 2026 07:09:33 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[radv: advertise VK_KHR_shader_constant_data]]></title>
+      <link>http://:?commit=91f5fcdcd56a005b514a5c800cb4649445ee7b68</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index bbacc374a85..3db91cc9231 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -579,6 +579,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_robustness2                                    DONE (anv, hasvk, hk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
+   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
+   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
++  VK_KHR_shader_constant_data                           DONE (radv)
+   VK_KHR_shader_fma                                     DONE (vn)
+   VK_KHR_shader_maximal_reconvergence                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, vn)
+   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=91f5fcdcd56a005b514a5c800cb4649445ee7b68</guid>
+      <pubDate>Thu, 23 Apr 2026 11:12:06 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[kk: Enable VK_AMD_shader_image_load_store_lod]]></title>
+      <link>http://:?commit=7d023db5b22f592962d955d265c4f64a628fc150</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index dd012e157c7..bbacc374a85 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -715,7 +715,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_AMD_shader_early_and_late_fragment_tests           DONE (radv)
+   VK_AMD_shader_explicit_vertex_parameter               DONE (radv)
+   VK_AMD_shader_fragment_mask                           DONE (radv/gfx10.3-)
+-  VK_AMD_shader_image_load_store_lod                    DONE (radv)
++  VK_AMD_shader_image_load_store_lod                    DONE (kk, radv)
+   VK_AMD_shader_trinary_minmax                          DONE (radv)
+   VK_AMD_texture_gather_bias_lod                        DONE (anv, radv)
+   VK_ANDROID_external_memory_android_hardware_buffer    DONE (anv, lvp, panvk, radv, tu, v3dv, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=7d023db5b22f592962d955d265c4f64a628fc150</guid>
+      <pubDate>Wed, 22 Apr 2026 06:42:08 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: do not enable extension without required feature]]></title>
       <link>http://:?commit=8cb89853b8f9993febb848ac83c5f6cf85aec11a</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +81,7 @@ index f50abe14b3d..dd012e157c7 100644
    VK_ARM_shader_core_properties                         DONE (panvk/v10+)
    VK_GOOGLE_decorate_string                             DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
    VK_GOOGLE_hlsl_functionality1                         DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=8cb89853b8f9993febb848ac83c5f6cf85aec11a</guid>
       <pubDate>Mon, 20 Apr 2026 17:36:20 +0000</pubDate>
@@ -1854,27 +1916,6 @@ index c24c5a81ed9..bdf7524703d 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=e9e4bd8e62164d48cf69db2ebeeb374c566f36ae</guid>
       <pubDate>Sat, 24 Jan 2026 21:44:01 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[tu: Implement VK_EXT_device_memory_report]]></title>
-      <link>http://:?commit=6d69d7e6bfeadeb9de4aa887da1b5f8cb2d0c3f9</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 016cc0a4ce0..c24c5a81ed9 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -618,7 +618,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_device_address_binding_report                  DONE (radv, tu)
-   VK_EXT_device_fault                                   DONE (radv)
-   VK_EXT_device_generated_commands                      DONE (lvp, nvk/Turing+, radv/gfx8+)
--  VK_EXT_device_memory_report                           DONE (anv, panvk, radv, vn)
-+  VK_EXT_device_memory_report                           DONE (anv, panvk, radv, tu, vn)
-   VK_EXT_direct_mode_display                            DONE (anv, hk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_EXT_discard_rectangles                             DONE (nvk, radv)
-   VK_EXT_display_control                                DONE (anv, hasvk, nvk, panvk, radv, tu)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=6d69d7e6bfeadeb9de4aa887da1b5f8cb2d0c3f9</guid>
-      <pubDate>Thu, 22 Jan 2026 20:11:24 +0000</pubDate>
     </item>
   </channel>
 </rss>

@@ -307,3 +307,4 @@
 [2026-04-21T14:40:26.219334+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_device_address_commands.html" is invalid [] []
 [2026-04-21T14:40:27.093658+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_primitive_restart_index.html" is invalid [] []
 [2026-04-21T14:40:28.239994+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_rgba10x6_formats.html" is invalid [] []
+[2026-04-26T06:49:08.365901+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_shader_constant_data.html" is invalid [] []
