@@ -44,7 +44,7 @@ jobs:
             if [ -d "$1" ]; then
               pushd "$1"
               git remote set-url origin "$2"
-              git pull || git fetch
+              git pull || git fetch --prune
               popd
             else
               git clone "$2" $3 "$1"
@@ -55,7 +55,7 @@ jobs:
           cd core
           sync_repo private https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git "--depth=1 -b data"
           cd private
-          sync_repo mesa.git https://github.com/external-mirrors/mesa "--bare -b main"
+          sync_repo mesa.git https://github.com/external-mirrors/mesa "--mirror -b main"
           cd ..
           composer install --no-dev
           cd ..
