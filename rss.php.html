@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: Wire up VK_EXT_conservative_rasterization on v11+]]></title>
+      <link>http://:?commit=7d59c62fded7638dbe8b7e0737a8ba491bf6438c</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index c9e5ac9aa94..ec9e39b98aa 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -611,7 +611,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_calibrated_timestamps                          DONE (anv, hasvk, hk, kk, nvk, panvk/v10+, lvp, radv, vn, tu/a750+)
+   VK_EXT_color_write_enable                             DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_conditional_rendering                          DONE (anv, hasvk, lvp, nvk, panvk/v10+, radv, tu, vn)
+-  VK_EXT_conservative_rasterization                     DONE (anv, nvk, radv, vn, tu/a7xx+)
++  VK_EXT_conservative_rasterization                     DONE (anv, nvk, panvk/v11+, radv, vn, tu/a7xx+)
+   VK_EXT_custom_border_color                            DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_custom_resolve                                 DONE (radv, tu)
+   VK_EXT_debug_marker                                   DONE (radv)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=7d59c62fded7638dbe8b7e0737a8ba491bf6438c</guid>
+      <pubDate>Tue, 28 Apr 2026 07:34:28 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: expose VK_KHR_performance_query on GFX11]]></title>
       <link>http://:?commit=acba4c9fd84ecf7de7e59c3463b9ac71ba812ccd</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index 79b445e31f1..c9e5ac9aa94 100644
    VK_KHR_pipeline_binary                                DONE (anv, hk, nvk, panvk, radv)
    VK_KHR_pipeline_executable_properties                 DONE (anv, hasvk, hk, nvk, panvk, pvr, radv, tu, v3dv)
    VK_KHR_pipeline_library                               DONE (anv, hk, lvp, nvk, panvk, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=acba4c9fd84ecf7de7e59c3463b9ac71ba812ccd</guid>
       <pubDate>Mon, 27 Apr 2026 16:16:00 +0000</pubDate>
