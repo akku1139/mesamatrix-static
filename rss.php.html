@@ -5,6 +5,92 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs/features: add OpenCL 3.1 section]]></title>
+      <link>http://:?commit=a50d2ce8d7ae412458c7301e6946f926cbc42bf2</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index c27e6dbe6ab..105f3527b5f 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -804,6 +804,21 @@ Rusticl OpenCL 3.0 -- all DONE:
+   CL_COMMAND_SVM_MIGRATE_MEM for clGetEventInfo         DONE
+   OpenCL C 3.0                                          DONE
+ 
++Rusticl OpenCL 3.1 -- all DONE: asahi, iris, llvmpipe, radeonsi, zink
++  cl_khr_il_program                                     DONE
++  - Support SPIR-V 1.4                                  DONE
++  - Max SPIR-V version                                  DONE 1.6
++  - clSetProgramSpecializationConstant                  DONE
++  Sub-groups                                            DONE ()
++  cl_khr_device_uuid                                    DONE (freedreno)
++  cl_khr_extended_bit_ops                               DONE
++  cl_khr_integer_dot_product                            DONE
++  cl_khr_spirv_queries                                  DONE
++  cl_khr_subgroup_extended_types                        DONE ()
++  cl_khr_subgroup_rotate                                DONE ()
++  cl_khr_subgroup_shuffle                               DONE ()
++  cl_khr_subgroup_shuffle_relative                      DONE ()
++  cl_khr_suggested_local_work_size                      DONE
+ 
+ Rusticl Optional Core Features:
+   Optional features for OpenCL 1.0                      in progress
+@@ -843,10 +858,6 @@ Rusticl Optional OpenCL 2.x Features:
+   - Sub-groups                                          DONE (asahi, iris, llvmpipe, radeonsi, zink)
+   - Work-group Collective Functions                     not started
+   - Generic Address Space                               in progress
+-  cl_khr_il_program                                     DONE
+-  - Support SPIR-V 1.1 and 1.2                          DONE
+-  - Max SPIR-V version                                  DONE 1.6
+-  - clSetProgramSpecializationConstant                  DONE
+   Program Initialization and Clean-Up Kernels           not started
+   - clSetProgramReleaseCallback                         not started
+   CL_MAX_SIZE_RESTRICTION_EXCEEDED for clSetKernelArg   not started
+@@ -860,13 +871,11 @@ Rusticl extensions:
+   cl_khr_d3d10_sharing                                  not started
+   cl_khr_d3d11_sharing                                  not started
+   cl_khr_device_enqueue_local_arg_types                 not started
+-  cl_khr_device_uuid                                    DONE (freedreno, iris, llvmpipe, radeonsi, zink)
+   cl_khr_dx9_media_sharing                              not started
+   cl_khr_egl_event                                      not started
+   cl_khr_egl_image                                      not started
+   cl_khr_expect_assume                                  in progress (hints are ignored)
+   cl_khr_extended_async_copies                          not started
+-  cl_khr_extended_bit_ops                               DONE
+   cl_khr_external_memory                                not started
+   cl_khr_external_memory_dma_buf                        not started
+   cl_khr_external_memory_opaque_fd                      not started
+@@ -884,7 +893,6 @@ Rusticl extensions:
+   cl_khr_initialize_memory                              not started
+   cl_khr_int64_base_atomics                             not started
+   cl_khr_int64_extended_atomics                         not started
+-  cl_khr_integer_dot_product                            DONE
+   cl_khr_kernel_clock                                   DONE (freedreno, iris, llvmpipe, nvc0, panfrost, radeonsi, zink, needs llvm-19)
+   cl_khr_mipmap_image                                   not started
+   cl_khr_mipmap_image_writes                            not started
+@@ -894,19 +902,13 @@ Rusticl extensions:
+   cl_khr_spirv_extended_debug_info                      not started
+   cl_khr_spirv_linkonce_odr                             DONE
+   cl_khr_spirv_no_integer_wrap_decoration               DONE
+-  cl_khr_spirv_queries                                  DONE
+   cl_khr_srgb_image_writes                              not started
+   cl_khr_subgroup_ballot                                DONE (asahi, iris, llvmpipe, radeonsi, zink)
+   cl_khr_subgroup_clustered_reduce                      DONE (asahi, llvmpipe, radeonsi, zink)
+-  cl_khr_subgroup_extended_types                        DONE (asahi, iris, llvmpipe, radeonsi, zink)
+   cl_khr_subgroup_named_barrier                         not started
+   cl_khr_subgroup_non_uniform_arithmetic                DONE (asahi, llvmpipe, radeonsi, zink)
+   cl_khr_subgroup_non_uniform_vote                      DONE (asahi, iris, llvmpipe, radeonsi, zink)
+-  cl_khr_subgroup_rotate                                DONE (asahi, iris, llvmpipe, radeonsi, zink)
+-  cl_khr_subgroup_shuffle                               DONE (asahi, iris, llvmpipe, radeonsi, zink)
+-  cl_khr_subgroup_shuffle_relative                      DONE (asahi, iris, llvmpipe, radeonsi, zink)
+   cl_khr_subgroups                                      in progress
+-  cl_khr_suggested_local_work_size                      DONE
+   cl_khr_terminate_context                              not started
+   cl_khr_throttle_hints                                 not started
+   cl_khr_work_group_uniform_arithmetic                  not started
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=a50d2ce8d7ae412458c7301e6946f926cbc42bf2</guid>
+      <pubDate>Wed, 13 May 2026 15:21:40 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: advertise VK_KHR_maintenance11]]></title>
       <link>http://:?commit=83d350dc1c2426e5c3aeeed36e21ab9ce992d177</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +105,7 @@ index 8725f672ed4..c27e6dbe6ab 100644
    VK_KHR_performance_query                              DONE (anv, radv/gfx10.3, radv/gfx11, tu, v3dv)
    VK_KHR_pipeline_binary                                DONE (anv, hk, nvk, panvk, radv)
    VK_KHR_pipeline_executable_properties                 DONE (anv, hasvk, hk, nvk, panvk, pvr, radv, tu, v3dv)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=83d350dc1c2426e5c3aeeed36e21ab9ce992d177</guid>
       <pubDate>Tue, 12 May 2026 16:28:43 +0000</pubDate>
@@ -1801,47 +1888,6 @@ index bf08859eefc..b36965e289f 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b7f0c541f234a19dfb8d17bff41fc41c061bda4c</guid>
       <pubDate>Thu, 12 Feb 2026 16:20:02 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Support VK_EXT_astc_decode_mode]]></title>
-      <link>http://:?commit=a16d36304ecf432528dd7ee821aecf3880449bca</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index aa0634a4467..bf08859eefc 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -597,6 +597,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_swapchain_maintenance1                         DONE (anv, hk, lvp, nvk, radv, tu, v3dv, vn)
-   VK_EXT_acquire_xlib_display                           DONE (anv, hk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_EXT_attachment_feedback_loop_dynamic_state         DONE (anv, lvp, radv, tu, vn)
-+  VK_EXT_astc_decode_mode                               DONE (panvk)
-   VK_EXT_attachment_feedback_loop_layout                DONE (anv, hk, lvp, nvk, radv, tu, v3dv, vn)
-   VK_EXT_blend_operation_advanced                       DONE (hk, lvp, vn)
-   VK_EXT_border_color_swizzle                           DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv/gfx10+, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=a16d36304ecf432528dd7ee821aecf3880449bca</guid>
-      <pubDate>Wed, 11 Feb 2026 20:13:45 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: expose swapchain_mutable_format support]]></title>
-      <link>http://:?commit=ac0cec60e2636cf44add6be83f06c37fb209f615</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index c9e9accb490..aa0634a4467 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -585,7 +585,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_surface                                        DONE (anv, dzn, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_surface_protected_capabilities                 DONE (anv, hk, lvp, nvk, radv, tu, v3dv, vn)
-   VK_KHR_swapchain                                      DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
--  VK_KHR_swapchain_mutable_format                       DONE (anv, hasvk, hk, kk, lvp, nvk, pvr, radv, tu, v3dv, vn)
-+  VK_KHR_swapchain_mutable_format                       DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_unified_image_layouts                          DONE (lvp, nvk, panvk, radv/gfx11+, tu)
-   VK_KHR_wayland_surface                                DONE (anv, dzn, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_workgroup_memory_explicit_layout               DONE (anv, hk, kk, lvp, nvk, hasvk, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=ac0cec60e2636cf44add6be83f06c37fb209f615</guid>
-      <pubDate>Wed, 11 Feb 2026 16:51:14 +0000</pubDate>
     </item>
   </channel>
 </rss>
