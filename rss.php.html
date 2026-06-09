@@ -5,6 +5,47 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[v3d: Enables GL_ARB_clip_control for v71+]]></title>
+      <link>http://:?commit=d81c4bd242648b93e21f2d6b4580213fa8458a1d</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index eaaa7240c62..11c1acf2f5b 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -214,7 +214,7 @@ GL 4.4, GLSL 4.40 -- all DONE: freedreno/a6xx, nvc0, r600, radeonsi, llvmpipe, v
+ GL 4.5, GLSL 4.50 -- all DONE: freedreno/a6xx, nvc0, r600, radeonsi, llvmpipe, virgl, zink, iris, crocus/gen7.5+, d3d12, asahi
+ 
+   GL_ARB_ES3_1_compatibility                            DONE (freedreno/a6xx, softpipe)
+-  GL_ARB_clip_control                                   DONE (freedreno, nv50, softpipe, lima, panfrost, crocus)
++  GL_ARB_clip_control                                   DONE (freedreno, nv50, softpipe, lima, panfrost, crocus, v3d)
+   GL_ARB_conditional_render_inverted                    DONE (freedreno, nv50, softpipe, panfrost, crocus/gen6+, svga)
+   GL_ARB_cull_distance                                  DONE (freedreno/a6xx,  nv50, softpipe, crocus/gen6+)
+   GL_ARB_derivative_control                             DONE (freedreno/a3xx+, nv50, softpipe, crocus/gen7+, svga)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=d81c4bd242648b93e21f2d6b4580213fa8458a1d</guid>
+      <pubDate>Mon, 08 Jun 2026 11:53:47 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[kk: Support VK_EXT_sample_locations]]></title>
+      <link>http://:?commit=d24599ee219f34fc837ff0b2bd6fbeca6f60bcaf</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index b3be36c7939..eaaa7240c62 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -683,7 +683,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_rasterization_order_attachment_access          DONE (lvp, tu, vn)
+   VK_EXT_rgba10x6_formats                               DONE (panvk/v11+)
+   VK_EXT_robustness2                                    DONE (anv, hasvk, hk, kk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
+-  VK_EXT_sample_locations                               DONE (anv, hasvk, hk, lvp, nvk, radv, tu/a650+, vn)
++  VK_EXT_sample_locations                               DONE (anv, hasvk, hk, kk, lvp, nvk, radv, tu/a650+, vn)
+   VK_EXT_shader_atomic_float                            DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_EXT_shader_atomic_float2                           DONE (anv, lvp, radv, vn)
+   VK_EXT_shader_float8                                  DONE (radv/gfx12+, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=d24599ee219f34fc837ff0b2bd6fbeca6f60bcaf</guid>
+      <pubDate>Mon, 08 Jun 2026 10:45:01 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[vulkan: Enable GOOGLE_display_timing on KHR_display across multiple drivers.]]></title>
       <link>http://:?commit=b6661df5f055ae66898e5a4facb5d4e1b501a1ec</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +60,7 @@ index 6f44ded21df..b3be36c7939 100644
    VK_GOOGLE_hlsl_functionality1                         DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
    VK_GOOGLE_user_type                                   DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
    VK_IMG_filter_cubic                                   DONE (tu/a650+, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b6661df5f055ae66898e5a4facb5d4e1b501a1ec</guid>
       <pubDate>Fri, 05 Jun 2026 10:21:51 +0000</pubDate>
