@@ -312,3 +312,4 @@
 [2026-06-08T09:11:01.411997+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_device_fault.html" is invalid [] []
 [2026-06-08T09:11:01.758102+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_vertex_attribute_robustness.html" is invalid [] []
 [2026-06-08T09:11:02.613498+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_GOOGLE_display_timing.html" is invalid [] []
+[2026-06-10T08:30:31.462971+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_shader_abort.html" is invalid [] []
