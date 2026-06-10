@@ -5,6 +5,25 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[radv: advertise VK_KHR_shader_abort]]></title>
+      <link>http://:?commit=887a390ec0349ae6efec74ea3c6de9dbdd2c7f0e</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 11c1acf2f5b..bfa72aea9cf 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -579,6 +579,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_ray_tracing_pipeline                           DONE (anv/gfx12.5+, lvp, radv/gfx10.3+, vn)
+   VK_KHR_ray_tracing_position_fetch                     DONE (anv, lvp, radv/gfx10.3+, vn)
+   VK_KHR_robustness2                                    DONE (anv, hasvk, hk, kk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
++  VK_KHR_shader_abort                                   DONE (radv)
+   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
+   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_shader_constant_data                           DONE (anv, radv)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=887a390ec0349ae6efec74ea3c6de9dbdd2c7f0e</guid>
+      <pubDate>Tue, 09 Jun 2026 10:33:12 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[v3d: Enables GL_ARB_clip_control for v71+]]></title>
       <link>http://:?commit=d81c4bd242648b93e21f2d6b4580213fa8458a1d</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +39,7 @@ index eaaa7240c62..11c1acf2f5b 100644
    GL_ARB_conditional_render_inverted                    DONE (freedreno, nv50, softpipe, panfrost, crocus/gen6+, svga)
    GL_ARB_cull_distance                                  DONE (freedreno/a6xx,  nv50, softpipe, crocus/gen6+)
    GL_ARB_derivative_control                             DONE (freedreno/a3xx+, nv50, softpipe, crocus/gen7+, svga)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=d81c4bd242648b93e21f2d6b4580213fa8458a1d</guid>
       <pubDate>Mon, 08 Jun 2026 11:53:47 +0000</pubDate>
@@ -2181,48 +2201,6 @@ index 0d25e65cf8c..b3a1b7eefd0 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b26838ed37c8cc9896c85f0efb415842165bc250</guid>
       <pubDate>Thu, 12 Mar 2026 11:43:02 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Implement VK_EXT_memory_budget support]]></title>
-      <link>http://:?commit=65216acd8298ff4e3abffcae9f073b016398d21b</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 0bc2b9642da..0d25e65cf8c 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -651,7 +651,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_legacy_vertex_attributes                       DONE (anv, lvp, nvk, radv, tu, vn)
-   VK_EXT_line_rasterization                             DONE (anv, hasvk, hk, nvk, panvk, pvr, lvp, radv, tu, v3dv, vn)
-   VK_EXT_load_store_op_none                             DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
--  VK_EXT_memory_budget                                  DONE (anv, hasvk, lvp, nvk, radv, tu, v3dv, vn)
-+  VK_EXT_memory_budget                                  DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_EXT_memory_priority                                DONE (lvp, radv)
-   VK_EXT_mesh_shader                                    DONE (anv/gfx12.5+, lvp, radv, vn)
-   VK_EXT_multi_draw                                     DONE (anv, hasvk, hk, lvp, nvk, radv, tu, vn, v3dv)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=65216acd8298ff4e3abffcae9f073b016398d21b</guid>
-      <pubDate>Wed, 11 Mar 2026 08:36:05 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[docs/features: VK_VALVE_mutable_descriptor_type: Add missing version info]]></title>
-      <link>http://:?commit=0d75cb479ef7d607f4e1b2ad2dd379f8803b24cc</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index e0a296d30c0..0bc2b9642da 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -699,7 +699,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_NVX_image_view_handle                              DONE (nvk)
-   VK_EXT_acquire_drm_display                            DONE (anv, hk, nvk, panvk, radv, tu, v3dv, vn)
-   VK_VALVE_fragment_density_map_layered                 DONE (tu)
--  VK_VALVE_mutable_descriptor_type                      DONE (anv, hasvk, hk, nvk, panvk, radv, tu, vn)
-+  VK_VALVE_mutable_descriptor_type                      DONE (anv, hasvk, hk, nvk, panvk/v9+, radv, tu, vn)
-   VK_AMD_buffer_marker                                  DONE (anv, nvk, radv, tu)
-   VK_AMD_device_coherent_memory                         DONE (radv)
-   VK_AMD_draw_indirect_count                            DONE (radv)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=0d75cb479ef7d607f4e1b2ad2dd379f8803b24cc</guid>
-      <pubDate>Wed, 11 Mar 2026 08:20:13 +0000</pubDate>
     </item>
   </channel>
 </rss>
