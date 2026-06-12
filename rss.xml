@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: Advertise VK_KHR_compute_shader_derivatives]]></title>
+      <link>http://:?commit=67ded3d07939865edb581f23cbb0b82056dcdefb</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index a22962b1e5f..655f36690e3 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -540,7 +540,7 @@ Khronos extensions that are not part of any Vulkan version:
+ 
+   VK_KHR_acceleration_structure                         DONE (anv/gfx12.5+, lvp, radv/gfx10.3+, tu/a740+, vn)
+   VK_KHR_calibrated_timestamps                          DONE (anv, hk, kk, nvk, panvk/v10+, radv, tu/a750+, vn)
+-  VK_KHR_compute_shader_derivatives                     DONE (anv, lvp, nvk, radv, tu, vn)
++  VK_KHR_compute_shader_derivatives                     DONE (anv, lvp, nvk, panvk/v9+, radv, tu, vn)
+   VK_KHR_cooperative_matrix                             DONE (anv, lvp, nvk/Turing+, radv/gfx11+, vn)
+   VK_KHR_copy_memory_indirect                           DONE (anv, lvp, nvk, radv/gfx8+)
+   VK_KHR_deferred_host_operations                       DONE (anv, hasvk, lvp, radv, tu, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=67ded3d07939865edb581f23cbb0b82056dcdefb</guid>
+      <pubDate>Thu, 11 Jun 2026 23:58:56 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[nvk: Advertise VK_NV_shader_atomic_float16_vector]]></title>
       <link>http://:?commit=3ebe2b61e8ebf0b6042a386699df0467e18718db</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +39,7 @@ index 1350e715293..a22962b1e5f 100644
    VK_NVX_image_view_handle                              DONE (nvk)
    VK_QCOM_fragment_density_map_offset                   DONE (tu)
    VK_QCOM_image_processing                              DONE (tu)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=3ebe2b61e8ebf0b6042a386699df0467e18718db</guid>
       <pubDate>Thu, 11 Jun 2026 00:23:36 +0000</pubDate>
