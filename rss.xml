@@ -5,6 +5,65 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[etnaviv: Support split sampler for 128-bit formats on the state path]]></title>
+      <link>http://:?commit=57f5acf849bde286905b18acdd43eb64fb7d1bd4</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index a6516891e77..ad47599c695 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -42,7 +42,7 @@ GL 3.0, GLSL 1.30 --- all DONE: freedreno, nv50, nvc0, r600, radeonsi, llvmpipe,
+   GL_NV_conditional_render (Conditional rendering)      DONE (v3d, etnaviv/HALTI0)
+   GL_ARB_map_buffer_range (Map buffer subranges)        DONE (v3d, vc4, lima)
+   GL_ARB_color_buffer_float (Clamping controls)         DONE (v3d, vc4, lima, etnaviv)
+-  GL_ARB_texture_float (Float textures, renderbuffers)  DONE (v3d, etnaviv/HALTI5)
++  GL_ARB_texture_float (Float textures, renderbuffers)  DONE (v3d, etnaviv/HALF_FLOAT)
+   GL_EXT_packed_float                                   DONE (v3d, etnaviv/HALTI0)
+   GL_EXT_texture_shared_exponent                        DONE (v3d, etnaviv/HALTI2)
+   GL_ARB_depth_buffer_float (Float depth buffers)       DONE (v3d)
+@@ -358,7 +358,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_OES_required_internalformat                        DONE (all drivers)
+   GL_OES_surfaceless_context                            DONE (all drivers)
+   GL_OES_texture_compression_astc                       DONE (core only)
+-  GL_OES_texture_float                                  DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus, etnaviv/HALTI5)
++  GL_OES_texture_float                                  DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+   GL_OES_texture_float_linear                           DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, virgl, zink, asahi, iris, crocus)
+   GL_OES_texture_half_float                             DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+   GL_OES_texture_half_float_linear                      DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=57f5acf849bde286905b18acdd43eb64fb7d1bd4</guid>
+      <pubDate>Fri, 19 Jun 2026 10:49:24 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[etnaviv: Advertise 128-bit color formats as renderable and samplable]]></title>
+      <link>http://:?commit=47a2f9e420c623aaf6d8baad133f7e507b20c6c5</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 73d471cccd2..a6516891e77 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -42,7 +42,7 @@ GL 3.0, GLSL 1.30 --- all DONE: freedreno, nv50, nvc0, r600, radeonsi, llvmpipe,
+   GL_NV_conditional_render (Conditional rendering)      DONE (v3d, etnaviv/HALTI0)
+   GL_ARB_map_buffer_range (Map buffer subranges)        DONE (v3d, vc4, lima)
+   GL_ARB_color_buffer_float (Clamping controls)         DONE (v3d, vc4, lima, etnaviv)
+-  GL_ARB_texture_float (Float textures, renderbuffers)  DONE (v3d)
++  GL_ARB_texture_float (Float textures, renderbuffers)  DONE (v3d, etnaviv/HALTI5)
+   GL_EXT_packed_float                                   DONE (v3d, etnaviv/HALTI0)
+   GL_EXT_texture_shared_exponent                        DONE (v3d, etnaviv/HALTI2)
+   GL_ARB_depth_buffer_float (Float depth buffers)       DONE (v3d)
+@@ -358,7 +358,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_OES_required_internalformat                        DONE (all drivers)
+   GL_OES_surfaceless_context                            DONE (all drivers)
+   GL_OES_texture_compression_astc                       DONE (core only)
+-  GL_OES_texture_float                                  DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus)
++  GL_OES_texture_float                                  DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus, etnaviv/HALTI5)
+   GL_OES_texture_float_linear                           DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, virgl, zink, asahi, iris, crocus)
+   GL_OES_texture_half_float                             DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+   GL_OES_texture_half_float_linear                      DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=47a2f9e420c623aaf6d8baad133f7e507b20c6c5</guid>
+      <pubDate>Fri, 19 Jun 2026 10:49:23 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: Advertise VK_EXT_rasterization_order_attachment_access]]></title>
       <link>http://:?commit=2b5dd5dca11ee27cc9ce31f3d378fd84fd300bf4</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -29,6 +88,7 @@ index 7560ea9ab5b..73d471cccd2 100644
    VK_ARM_scheduling_controls                            DONE (panvk/v10+)
    VK_ARM_shader_core_builtins                           DONE (panvk/v9+)
    VK_ARM_shader_core_properties                         DONE (panvk/v10+)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=2b5dd5dca11ee27cc9ce31f3d378fd84fd300bf4</guid>
       <pubDate>Thu, 18 Jun 2026 16:16:50 +0000</pubDate>
@@ -2335,27 +2395,6 @@ index eb86535b0fc..783c81080b9 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=9ec387efb140ad8f1f70c4e8dbc8159e593eb116</guid>
       <pubDate>Mon, 23 Mar 2026 08:00:39 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Advertise VK_EXT_conditional_rendering]]></title>
-      <link>http://:?commit=87bac263c95914b0a1f95b205d29741704659ead</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 5fae401613d..eb86535b0fc 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -605,7 +605,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_buffer_device_address                          DONE (anv, dzn/sm6.6+, hasvk, hk, nvk, panvk, radv, vn)
-   VK_EXT_calibrated_timestamps                          DONE (anv, hasvk, hk, kk, nvk, panvk/v10+, lvp, radv, vn, tu/a750+)
-   VK_EXT_color_write_enable                             DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
--  VK_EXT_conditional_rendering                          DONE (anv, hasvk, lvp, nvk, radv, tu, vn)
-+  VK_EXT_conditional_rendering                          DONE (anv, hasvk, lvp, nvk, panvk/v10+, radv, tu, vn)
-   VK_EXT_conservative_rasterization                     DONE (anv, nvk, radv, vn, tu/a7xx+)
-   VK_EXT_custom_border_color                            DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_custom_resolve                                 DONE (radv, tu)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=87bac263c95914b0a1f95b205d29741704659ead</guid>
-      <pubDate>Fri, 20 Mar 2026 19:12:20 +0000</pubDate>
     </item>
   </channel>
 </rss>
