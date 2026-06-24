@@ -5,6 +5,45 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[radv: implement VK_EXT_shader_split_barrier]]></title>
+      <link>http://:?commit=a8b513b54990a53ae9aeec397f6b0acfcb348b3e</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 18dba3e769e..61ac8ebcdbd 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -692,6 +692,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_shader_module_identifier                       DONE (anv, hasvk, hk, nvk, panvk, radv, tu, v3dv)
+   VK_EXT_shader_object                                  DONE (anv, lvp, hk, nvk, radv)
+   VK_EXT_shader_replicated_composites                   DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
++  VK_EXT_shader_split_barrier                           DONE (radv/gfx12+)
+   VK_EXT_shader_stencil_export                          DONE (anv, hk, kk, lvp, panvk, radv, tu, vn)
+   VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
+   VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=a8b513b54990a53ae9aeec397f6b0acfcb348b3e</guid>
+      <pubDate>Tue, 23 Jun 2026 08:50:35 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[panvk: Advertise VK_EXT_shader_tile_image]]></title>
+      <link>http://:?commit=dc02a63d212d314ade09b7f0d05c3ead4832cd8e</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 26dc97ee036..18dba3e769e 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -695,6 +695,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_shader_stencil_export                          DONE (anv, hk, kk, lvp, panvk, radv, tu, vn)
+   VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
+   VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
++  VK_EXT_shader_tile_image                              DONE (panvk/v9+)
+   VK_EXT_shader_uniform_buffer_unsized_array            DONE (anv, hk, nvk, panvk, radv, tu, vn)
+   VK_EXT_surface_maintenance1                           DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+   VK_EXT_swapchain_colorspace                           DONE (anv, hk, kk, lvp, nvk, radv, tu, v3dv, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=dc02a63d212d314ade09b7f0d05c3ead4832cd8e</guid>
+      <pubDate>Tue, 23 Jun 2026 08:11:53 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: Advertise VK_EXT_image_sliced_view_of_3d]]></title>
       <link>http://:?commit=b43e7ab9edcf64e7224c8cba66d3def2704f2d18</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +59,7 @@ index ad47599c695..26dc97ee036 100644
    VK_EXT_image_view_min_lod                             DONE (anv, hasvk, hk, nvk, panvk, radv, tu, vn)
    VK_EXT_index_type_uint8                               DONE (anv, hasvk, hk, kk, nvk, lvp, panvk, pvr, radv/gfx8+, tu, v3dv, vn)
    VK_EXT_legacy_dithering                               DONE (anv, panvk, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b43e7ab9edcf64e7224c8cba66d3def2704f2d18</guid>
       <pubDate>Mon, 22 Jun 2026 08:24:18 +0000</pubDate>
