@@ -314,3 +314,5 @@
 [2026-06-08T09:11:02.613498+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_GOOGLE_display_timing.html" is invalid [] []
 [2026-06-10T08:30:31.462971+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_shader_abort.html" is invalid [] []
 [2026-06-11T08:58:27.713146+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_NV_shader_atomic_float16_vector.html" is invalid [] []
+[2026-06-24T07:57:34.136392+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_tile_image.html" is invalid [] []
+[2026-06-24T07:57:34.354051+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_split_barrier.html" is invalid [] []
