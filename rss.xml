@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: Advertise VK_KHR_internally_synchronized_queues]]></title>
+      <link>http://:?commit=3b1f86d437fe61e740b75bee058737c5a8d65db9</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 61ac8ebcdbd..e4c700a0045 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -560,7 +560,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_get_display_properties2                        DONE (anv, hasvk, hk, kk, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_get_surface_capabilities2                      DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_incremental_present                            DONE (anv, hasvk, hk, lvp, nvk, pvr, radv, tu, v3dv, vn)
+-  VK_KHR_internally_synchronized_queues                 DONE (anv, radv, tu)
++  VK_KHR_internally_synchronized_queues                 DONE (anv, panvk, radv, tu)
+   VK_KHR_maintenance7                                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, tu, vn)
+   VK_KHR_maintenance8                                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, tu)
+   VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=3b1f86d437fe61e740b75bee058737c5a8d65db9</guid>
+      <pubDate>Wed, 24 Jun 2026 08:36:58 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: implement VK_EXT_shader_split_barrier]]></title>
       <link>http://:?commit=a8b513b54990a53ae9aeec397f6b0acfcb348b3e</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +39,7 @@ index 18dba3e769e..61ac8ebcdbd 100644
    VK_EXT_shader_stencil_export                          DONE (anv, hk, kk, lvp, panvk, radv, tu, vn)
    VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
    VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=a8b513b54990a53ae9aeec397f6b0acfcb348b3e</guid>
       <pubDate>Tue, 23 Jun 2026 08:50:35 +0000</pubDate>
