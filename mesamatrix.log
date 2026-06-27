@@ -316,3 +316,4 @@
 [2026-06-11T08:58:27.713146+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_NV_shader_atomic_float16_vector.html" is invalid [] []
 [2026-06-24T07:57:34.136392+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_tile_image.html" is invalid [] []
 [2026-06-24T07:57:34.354051+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_split_barrier.html" is invalid [] []
+[2026-06-27T07:33:10.713282+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_image_compression_control_swapchain.html" is invalid [] []
