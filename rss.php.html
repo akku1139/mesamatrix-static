@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[radv: enable VK_EXT_descriptor_heap by default]]></title>
+      <link>http://:?commit=26cc643a500b843243ac9552497098dc958c7815</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index b92ffa33fb4..da3ae63416d 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -627,7 +627,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_depth_clip_enable                              DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv/vc7+, vn)
+   VK_EXT_depth_range_unrestricted                       DONE (anv/gen20+, nvk, radv, lvp, vn)
+   VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, radv, tu)
+-  VK_EXT_descriptor_heap                                DONE (vn)
++  VK_EXT_descriptor_heap                                DONE (radv, vn)
+   VK_EXT_device_address_binding_report                  DONE (anv, radv, tu)
+   VK_EXT_device_fault                                   DONE (radv)
+   VK_EXT_device_generated_commands                      DONE (anv, lvp, nvk/Turing+, radv/gfx8+)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=26cc643a500b843243ac9552497098dc958c7815</guid>
+      <pubDate>Mon, 29 Jun 2026 06:15:46 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: advertise EXT_image_compression_control_swapchain]]></title>
       <link>http://:?commit=b7e2bbd505535e6a99b9594123a9651f4d61d90a</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +39,7 @@ index 8b5c185318d..b92ffa33fb4 100644
    VK_EXT_image_drm_format_modifier                      DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv/gfx9+, tu, v3dv, vn)
    VK_EXT_image_sliced_view_of_3d                        DONE (anv, hk, lvp, nvk, panvk, radv/gfx10+, vn)
    VK_EXT_image_view_min_lod                             DONE (anv, hasvk, hk, nvk, panvk, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b7e2bbd505535e6a99b9594123a9651f4d61d90a</guid>
       <pubDate>Fri, 26 Jun 2026 11:06:33 +0000</pubDate>
@@ -2444,27 +2465,6 @@ index 89fbd74fd8c..1fcc520ac9d 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=2b280305af78e425664d902fab35b3b3bd876885</guid>
       <pubDate>Tue, 31 Mar 2026 11:42:22 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[docs: add missing bits for pvr's VK_EXT_non_seamless_cube_map]]></title>
-      <link>http://:?commit=08e75046a46fad6d1957dcc3e1e34485a98b9538</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 3bab209c284..89fbd74fd8c 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -659,7 +659,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_multi_draw                                     DONE (anv, hasvk, hk, lvp, nvk, radv, tu, vn, v3dv)
-   VK_EXT_multisampled_render_to_single_sampled          DONE (lvp, vn, panvk, tu)
-   VK_EXT_nested_command_buffer                          DONE (anv, lvp, nvk, panvk/v10+, radv, tu, vn)
--  VK_EXT_non_seamless_cube_map                          DONE (anv, hasvk, hk, lvp, nvk, panvk, radv, tu, vn)
-+  VK_EXT_non_seamless_cube_map                          DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, vn)
-   VK_EXT_pageable_device_local_memory                   DONE (lvp)
-   VK_EXT_pci_bus_info                                   DONE (anv, hasvk, nvk, radv, vn)
-   VK_EXT_physical_device_drm                            DONE (anv, hasvk, hk, nvk, panvk, pvr, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=08e75046a46fad6d1957dcc3e1e34485a98b9538</guid>
-      <pubDate>Mon, 30 Mar 2026 17:41:34 +0000</pubDate>
     </item>
   </channel>
 </rss>
