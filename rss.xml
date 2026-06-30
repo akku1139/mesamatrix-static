@@ -5,6 +5,74 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs/features: Mark VK_EXT_descriptor_heap done for anv]]></title>
+      <link>http://:?commit=b773000de187f5e88afab71b0da68d8014ee49a8</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 4c0f2bd2650..37245ae6fe3 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -627,7 +627,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_depth_clip_enable                              DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv/vc7+, vn)
+   VK_EXT_depth_range_unrestricted                       DONE (anv/gen20+, nvk, radv, lvp, vn)
+   VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, radv, tu)
+-  VK_EXT_descriptor_heap                                DONE (radv, vn)
++  VK_EXT_descriptor_heap                                DONE (anv, radv, vn)
+   VK_EXT_device_address_binding_report                  DONE (anv, radv, tu)
+   VK_EXT_device_fault                                   DONE (radv)
+   VK_EXT_device_generated_commands                      DONE (anv, lvp, nvk/Turing+, radv/gfx8+)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=b773000de187f5e88afab71b0da68d8014ee49a8</guid>
+      <pubDate>Mon, 29 Jun 2026 09:06:57 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[docs/features: Fix typo]]></title>
+      <link>http://:?commit=2990ae089c55d14e5f09c8855b419bb6bb5cc043</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index b023ec91b20..4c0f2bd2650 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -341,7 +341,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_shader_realtime_clock                          DONE (panfrost/v6+)
+   GL_EXT_sRGB_write_control                             DONE (all drivers that support GLES 3.0+)
+   GL_EXT_texture_compression_astc_decode_mode           DONE (panfrost)
+-  GL_EXT_texture_norm16                                 DONE (freedreno, r600, radeonsi, nvc0i, softpipe, llvmpipe, virgl, zink, iris, crocus)
++  GL_EXT_texture_norm16                                 DONE (freedreno, r600, radeonsi, nvc0, softpipe, llvmpipe, virgl, zink, iris, crocus)
+   GL_EXT_texture_sRGB_R8                                DONE (all drivers that support GLES 3.0+)
+   GL_EXT_texture_shadow_lod                             DONE (asahi, crocus/gen6+, iris, llvmpipe, nvc0, radeonsi, r600/evergreen+, virgl)
+   GL_EXT_texture_view                                   DONE (all drivers that support GL_OES_texture_view)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=2990ae089c55d14e5f09c8855b419bb6bb5cc043</guid>
+      <pubDate>Mon, 29 Jun 2026 07:55:15 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[docs/features: Remove mentions of r300 and nv30]]></title>
+      <link>http://:?commit=f05e5e0f91002eab706b42e7133309bceff339d6</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index da3ae63416d..b023ec91b20 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -358,10 +358,10 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_OES_required_internalformat                        DONE (all drivers)
+   GL_OES_surfaceless_context                            DONE (all drivers)
+   GL_OES_texture_compression_astc                       DONE (core only)
+-  GL_OES_texture_float                                  DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+-  GL_OES_texture_float_linear                           DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, virgl, zink, asahi, iris, crocus)
+-  GL_OES_texture_half_float                             DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+-  GL_OES_texture_half_float_linear                      DONE (freedreno, r300, r600, radeonsi, nv30, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
++  GL_OES_texture_float                                  DONE (freedreno, r600, radeonsi, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, asahi, iris, crocus, etnaviv/HALF_FLOAT)
++  GL_OES_texture_float_linear                           DONE (freedreno, r600, radeonsi, nv50, nvc0, softpipe, llvmpipe, panfrost, virgl, zink, asahi, iris, crocus)
++  GL_OES_texture_half_float                             DONE (freedreno, r600, radeonsi, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
++  GL_OES_texture_half_float_linear                      DONE (freedreno, r600, radeonsi, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, lima, asahi, iris, crocus, etnaviv/HALF_FLOAT)
+   GL_OES_texture_view                                   DONE (freedreno, r600, radeonsi, nv50, nvc0, softpipe, llvmpipe, panfrost, v3d, virgl, zink, iris, crocus/gen7+, d3d12)
+   GL_OES_viewport_array                                 DONE (freedreno/a6xx, nvc0, r600, radeonsi, softpipe, llvmpipe, virgl, zink, iris, crocus/gen7.5+, asahi)
+   GL_OVR_multiview                                      DONE (llvmpipe, zink)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=f05e5e0f91002eab706b42e7133309bceff339d6</guid>
+      <pubDate>Mon, 29 Jun 2026 07:55:15 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: enable VK_EXT_descriptor_heap by default]]></title>
       <link>http://:?commit=26cc643a500b843243ac9552497098dc958c7815</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +88,7 @@ index b92ffa33fb4..da3ae63416d 100644
    VK_EXT_device_address_binding_report                  DONE (anv, radv, tu)
    VK_EXT_device_fault                                   DONE (radv)
    VK_EXT_device_generated_commands                      DONE (anv, lvp, nvk/Turing+, radv/gfx8+)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=26cc643a500b843243ac9552497098dc958c7815</guid>
       <pubDate>Mon, 29 Jun 2026 06:15:46 +0000</pubDate>
