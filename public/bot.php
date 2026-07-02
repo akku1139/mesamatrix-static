@@ -1,11 +1,9 @@
 <?php
 
-declare(strict_types=1);
-
 /*
  * This file is part of mesamatrix.
  *
- * Copyright (C) 2014-2022 Romain "Creak" Failliot.
+ * Copyright (C) 2014-2026 Romain "Creak" Failliot.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as
@@ -21,14 +19,7 @@ declare(strict_types=1);
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Mesamatrix\Donation;
+require_once "../src/base.php";
 
-class YearContributors
-{
-    public string $year;
-
-    /** @var Contributor[] */
-    public $contributors = array();
-
-    public float $total = 0.0;
-}
+$controller = new Mesamatrix\Controller\BotController();
+$controller->writeHtml();
