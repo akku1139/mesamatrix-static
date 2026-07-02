@@ -142,6 +142,7 @@ class ApiSubController
                 }
             }
         }
+        unset($driverNames);
 
         foreach ($vendors as $vendorName => $driverNames) {
             // Add separator before each vendor.
