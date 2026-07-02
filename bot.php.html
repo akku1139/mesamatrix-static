@@ -11,13 +11,10 @@
         <meta property="og:image" content="//mesamatrix.net/images/mesamatrix-logo.png" />
 
         <link rel="icon" href="images/gears.png" type="image/png" />
-        <link rel="alternate" type="application/rss+xml" title="rss feed" href="rss.php" />        <link href="css/gh-fork-ribbon.css" rel="stylesheet" type="text/css" media="all" />        <link href="css/style.css?v=3.2" rel="stylesheet" type="text/css" media="all" />        <script src="js/jquery-3.7.0.min.js"></script>        <script src="js/script.js"></script>        <script src="js/script.js"></script>    </head>
+        <link rel="alternate" type="application/rss+xml" title="rss feed" href="rss.php" />        <link href="css/gh-fork-ribbon.css" rel="stylesheet" type="text/css" media="all" />        <link href="css/style.css?v=3.2" rel="stylesheet" type="text/css" media="all" />        <script src="js/jquery-3.7.0.min.js"></script>        <script src="js/script.js"></script>    </head>
     <body>
         <header>
-            <a href="."><img src="images/banner.svg" class="banner" alt="Mesamatrix banner" /> - Static Edition</a>            <div class="menu">
-                <ul class="menu-list">                        <li><a href=".">Home</a></li>                        <li><a href="about.php">About</a></li>                        <li class="menu-selected"><a href="donate.php">Donate?</a></li>                    <li><a href="rss.php" class="rss"><img class="rss" src="images/feed.svg" alt="RSS feed" /></a></li>
-                </ul>
-            </div><!-- Matomo -->
+            <a href="."><img src="images/banner.svg" class="banner" alt="Mesamatrix banner" /> - Static Edition</a><!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -33,9 +30,18 @@
 </script>
 <!-- End Matomo Code -->
         </header>
-        <main>    <h1>Thinking about donating?</h1>
-    <p>Thanks for the thought! However, Mesamatrix-Static is powered by free tiers on GitHub and Cloudflare.</p>
-    <p>Please direct your generosity to <a href="https://mesamatrix.net/donate.php">Mesamatrix.net</a> instead.</p>        </main>
+        <main>    <h1>What is this bot?</h1>
+    <p>If you got to this page, it's probably because you encountered an unknown User Agent with a
+    link that led you here.</p>
+    <h2><code>Mesamatrix-LinkChecker</code></h2>
+    </li>
+    <p>This bot is part of the script that updates this website. Based on the API extension names
+    (e.g. <code>VK_KHR_index_type_uint8</code>), it tries to find a URL that would link to a
+    documentation page (e.g.
+    <a href="https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_index_type_uint8.html">https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_index_type_uint8.html</a>).</p>
+    <p>The first time Mesamatrix is set up it tries a URL for all the extensions (~700 URLs) and
+    cache the result for 3 months (to prevent spamming). When updating, if a new API extension is
+    found, it tries just the one URL and cache the result.</p>        </main>
         <footer>
             <a class="github-fork-ribbon" href="https://github.com/akku1139/mesamatrix-static" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
             <div class="theme-switch-wrapper">
