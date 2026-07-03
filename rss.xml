@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[kk: Implement VK_KHR_dynamic_rendering_local_read]]></title>
+      <link>http://:?commit=59627d905b7b1fa0ae9078a7aad34e072026fa9f</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index dc792cc5efc..e89d35ab9e6 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -519,7 +519,7 @@ Vulkan 1.3 -- all DONE: anv, hk, kk, lvp, nvk, panvk/v10+, radv, tu, vn, v3dv
+ 
+ Vulkan 1.4 -- all DONE: anv, hk, lvp, nvk, panvk/v10+, radv/gfx8+, tu/a7xx+, vn
+ 
+-  VK_KHR_dynamic_rendering_local_read                   DONE (anv, lvp, nvk, panvk, radv, tu, vn)
++  VK_KHR_dynamic_rendering_local_read                   DONE (anv, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_global_priority                                DONE (anv, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_index_type_uint8                               DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_line_rasterization                             DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=59627d905b7b1fa0ae9078a7aad34e072026fa9f</guid>
+      <pubDate>Thu, 02 Jul 2026 18:10:06 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: Advertise VK_EXT_device_address_binding_report]]></title>
       <link>http://:?commit=d6e1ed833b49c81572a80ad99b8c0d2fd0f385c8</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index 37245ae6fe3..dc792cc5efc 100644
    VK_EXT_device_fault                                   DONE (radv)
    VK_EXT_device_generated_commands                      DONE (anv, lvp, nvk/Turing+, radv/gfx8+)
    VK_EXT_device_memory_report                           DONE (anv, panvk, pvr, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=d6e1ed833b49c81572a80ad99b8c0d2fd0f385c8</guid>
       <pubDate>Wed, 01 Jul 2026 09:23:49 +0000</pubDate>
