@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[anv: enable VK_KHR_shader_fma]]></title>
+      <link>http://:?commit=9092781412a8e828ff36a838ee870a5dff7d56be</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index e89d35ab9e6..90d94048388 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -583,7 +583,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
+   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_shader_constant_data                           DONE (anv, radv)
+-  VK_KHR_shader_fma                                     DONE (kk, nvk, panvk, radv, vn)
++  VK_KHR_shader_fma                                     DONE (anv, kk, nvk, panvk, radv, vn)
+   VK_KHR_shader_maximal_reconvergence                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, vn)
+   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, vn)
+   VK_KHR_shader_relaxed_extended_instruction            DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=9092781412a8e828ff36a838ee870a5dff7d56be</guid>
+      <pubDate>Fri, 03 Jul 2026 23:21:31 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[kk: Implement VK_KHR_dynamic_rendering_local_read]]></title>
       <link>http://:?commit=59627d905b7b1fa0ae9078a7aad34e072026fa9f</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index dc792cc5efc..e89d35ab9e6 100644
    VK_KHR_global_priority                                DONE (anv, kk, lvp, nvk, panvk, radv, tu, vn)
    VK_KHR_index_type_uint8                               DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_KHR_line_rasterization                             DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=59627d905b7b1fa0ae9078a7aad34e072026fa9f</guid>
       <pubDate>Thu, 02 Jul 2026 18:10:06 +0000</pubDate>
