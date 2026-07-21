@@ -142,6 +142,7 @@ class ApiSubController
                 }
             }
         }
+        unset($driverNames);
 
         foreach ($vendors as $vendorName => $driverNames) {
             // Add separator before each vendor.
@@ -157,15 +158,16 @@ class ApiSubController
             // Add vendor drivers columns.
             $colgroup = array(
                 'name' => $vendorName,
-                'vendor_class' => strtolower($vendorName),
+                'vendor_class' => 'default',
                 'columns' => array()
             );
+            $vendorClass = trim(strtolower($vendorName), '[]');
             foreach ($driverNames as $driverName) {
                 $colgroup['columns'][] = $columnIdx++;
                 $this->matrix['columns'][] = array(
                     'name' => $driverName,
                     'type' => 'driver',
-                    'vendor_class' => $colgroup['vendor_class']
+                    'vendor_class' => $vendorClass
                 );
             }
 
@@ -377,10 +379,9 @@ HTML;
                 else :
                     $colspan = count($colgroup['columns']);
                     $colgroupName = $colgroup['name'];
-                    $vendorClass = "hCellVendor-" . $colgroup['vendor_class'];
 
                     echo <<<HTML
-                        <th colspan="{$colspan}" class="hCellHeader hCellVendor-{$vendorClass}">{$colgroupName}</th>
+                        <th colspan="{$colspan}" class="hCellHeader">{$colgroupName}</th>
 HTML;
                 endif;
             endforeach;
@@ -392,23 +393,17 @@ HTML;
 
             // Header (drivers).
             foreach ($this->matrix['columns'] as $col) :
-                if ($col['type'] === 'extension') :
-                    echo <<<HTML
-                        <th class="hCellHeader hCellVendor-default">{$col['name']}</th>
-HTML;
-                elseif ($col['type'] === 'driver') :
-                    echo <<<HTML
-                        <th class="hCellHeader hCellVendor-{$col['vendor_class']}">{$col['name']}</th>
-HTML;
+                $thClasses = '';
+                $thContent = $col['name'];
+                if ($col['type'] === 'extension' || $col['type'] === 'driver') :
+                    $thClasses = "hCellHeader hCellVendor-{$col['vendor_class']}";
                 elseif ($col['type'] === 'separator') :
-                    echo <<<'HTML'
-                        <th class="hCellSep"></th>
-HTML;
-                else :
-                    echo <<<HTML
-                        <th>{$col['name']}</th>
-HTML;
+                    $thClasses = 'hCellSep';
                 endif;
+
+                echo <<<HTML
+                    <th class="{$thClasses}">{$thContent}</th>
+HTML;
             endforeach;
 
             echo <<<'HTML'

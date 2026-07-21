@@ -43,7 +43,6 @@ abstract class Constants
         'iris',
         'lima',
         'llvmpipe',
-        'nv30',
         'nv50',
         'nvc0',
         'panfrost',
@@ -62,12 +61,12 @@ abstract class Constants
         'Apple'         => [ 'asahi' ],
         'Arm'           => [ 'lima', 'panfrost' ],
         'Broadcom'      => [ 'v3d', 'vc4' ],
-        'Intel'         => [ 'iris', 'crocus' ],
-        'Nvidia'        => [ 'nv30', 'nv50', 'nvc0' ],
+        'Intel'         => [ 'crocus', 'iris' ],
+        'Nvidia'        => [ 'nv50', 'nvc0' ],
         'Qualcomm'      => [ 'freedreno' ],
-        'Software'      => [ 'llvmpipe', 'softpipe' ],
-        'Translation'   => [ 'd3d12', 'virgl', 'zink' ],
         'Vivante'       => [ 'etnaviv' ],
+        '[Software]'    => [ 'llvmpipe', 'softpipe' ],
+        '[Translation]' => [ 'd3d12', 'virgl', 'zink' ],
     ];
 
     // Vulkan.
@@ -101,8 +100,8 @@ abstract class Constants
         'Nvidia'        => [ 'nvk' ],
         'PowerVR'       => [ 'pvr' ],
         'Qualcomm'      => [ 'tu' ],
-        'Software'      => [ 'lvp' ],
-        'Translation'   => [ 'dzn', 'kk', 'vn' ],
+        '[Software]'    => [ 'lvp' ],
+        '[Translation]' => [ 'dzn', 'kk', 'vn' ],
     ];
 
     // OpenCL.
@@ -125,14 +124,14 @@ abstract class Constants
 
     /** @var array<string, string[]> */
     public const array RUSTICL_OPENCL_ALL_DRIVERS_VENDORS = [
-        'AMD'         => [ 'radeonsi' ],
-        'Apple'       => [ 'asahi' ],
-        'Arm'         => [ 'panfrost' ],
-        'Intel'       => [ 'iris' ],
-        'Nvidia'      => [ 'nvc0' ],
-        'Qualcomm'    => [ 'freedreno' ],
-        'Software'    => [ 'llvmpipe' ],
-        'Translation' => [ 'zink' ],
+        'AMD'           => [ 'radeonsi' ],
+        'Apple'         => [ 'asahi' ],
+        'Arm'           => [ 'panfrost' ],
+        'Intel'         => [ 'iris' ],
+        'Nvidia'        => [ 'nvc0' ],
+        'Qualcomm'      => [ 'freedreno' ],
+        '[Software]'    => [ 'llvmpipe' ],
+        '[Translation]' => [ 'zink' ],
     ];
 
     // Hints enabling for all drivers.
@@ -152,7 +151,7 @@ abstract class Constants
     // 3: dependency match index
     /** @var array<array{string, bool, int, int}> */
     public const array RE_DEP_DRIVERS_HINTS = [
-        [ '/^all drivers that support (GL_[_[:alnum:]]+)$/i', true, DependsOn::EXTENSION, 1 ],
+        [ '/^all drivers that supports? (GL_[_[:alnum:]]+)$/i', true, DependsOn::EXTENSION, 1 ],
         [ '/^all drivers that support GLES (\d+\.\d+)?\+?$/i', true, DependsOn::GLES_VERSION, 1 ],
     ];
 }
