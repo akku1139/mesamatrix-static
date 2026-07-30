@@ -5,6 +5,47 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: advertise VK_KHR_maintenance6 on v6-7]]></title>
+      <link>http://:?commit=4e2e284654faf92b3cb755f0bd1bd4d7e158b0bc</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 64ffdfb33ee..42a90cf1220 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -525,7 +525,7 @@ Vulkan 1.4 -- all DONE: anv, hk, lvp, nvk, panvk/v10+, radv/gfx8+, tu/a7xx+, vn
+   VK_KHR_line_rasterization                             DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_load_store_op_none                             DONE (anv, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+   VK_KHR_maintenance5                                   DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_KHR_maintenance6                                   DONE (anv, hasvk, kk, lvp, nvk, panvk/v10+, radv, tu, vn)
++  VK_KHR_maintenance6                                   DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_map_memory2                                    DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_KHR_push_descriptor                                DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_shader_expect_assume                           DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=4e2e284654faf92b3cb755f0bd1bd4d7e158b0bc</guid>
+      <pubDate>Wed, 29 Jul 2026 19:57:50 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[panvk: Advertise VK_KHR_copy_memory_indirect]]></title>
+      <link>http://:?commit=8b00adbe72f2705985146b057f6fde9256d0dcb0</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 4d3d71ae912..64ffdfb33ee 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -542,7 +542,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_calibrated_timestamps                          DONE (anv, hasvk, hk, kk, nvk, panvk/v10+, radv, tu/a750+, vn)
+   VK_KHR_compute_shader_derivatives                     DONE (anv, lvp, nvk, panvk/v9+, radv, tu, vn)
+   VK_KHR_cooperative_matrix                             DONE (anv, lvp, nvk/Turing+, radv/gfx11+, vn)
+-  VK_KHR_copy_memory_indirect                           DONE (anv, lvp, nvk, radv/gfx8+)
++  VK_KHR_copy_memory_indirect                           DONE (anv, lvp, nvk, panvk/v10+, radv/gfx8+)
+   VK_KHR_deferred_host_operations                       DONE (anv, hasvk, lvp, radv, tu, vn)
+   VK_KHR_depth_clamp_zero_one                           DONE (anv, nvk, panvk, radv, tu, vn)
+   VK_KHR_device_address_commands                        DONE (anv, lvp, radv)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=8b00adbe72f2705985146b057f6fde9256d0dcb0</guid>
+      <pubDate>Wed, 29 Jul 2026 10:55:18 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[pvr: enable VK_KHR_synchronization2]]></title>
       <link>http://:?commit=10b99d5d2e386140070465358f3ccffbf834cf1c</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +61,7 @@ index 3c6a859584a..4d3d71ae912 100644
    VK_KHR_zero_initialize_workgroup_memory               DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, v3dv, vn)
    VK_EXT_4444_formats                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, v3dv, vn)
    VK_EXT_extended_dynamic_state                         DONE (anv, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=10b99d5d2e386140070465358f3ccffbf834cf1c</guid>
       <pubDate>Tue, 28 Jul 2026 08:49:48 +0000</pubDate>
