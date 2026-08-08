@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs: fix reporting VK_KHR_index_type_uint8 on RADV]]></title>
+      <link>http://:?commit=33780ef17231d34dc2c1348e9b967fb0f1f37cda</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 9f96bc3b282..b3e59a3648c 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -521,7 +521,7 @@ Vulkan 1.4 -- all DONE: anv, hk, lvp, nvk, panvk/v10+, radv/gfx8+, tu/a7xx+, vn
+ 
+   VK_KHR_dynamic_rendering_local_read                   DONE (anv, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_global_priority                                DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+-  VK_KHR_index_type_uint8                               DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
++  VK_KHR_index_type_uint8                               DONE (anv, kk, lvp, nvk, panvk, pvr, radv/gfx8+, tu, v3dv, vn)
+   VK_KHR_line_rasterization                             DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_load_store_op_none                             DONE (anv, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+   VK_KHR_maintenance5                                   DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=33780ef17231d34dc2c1348e9b967fb0f1f37cda</guid>
+      <pubDate>Fri, 07 Aug 2026 06:16:24 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[venus: support VK_EXT_rgba10x6_formats]]></title>
       <link>http://:?commit=e2f0c8c1eefd66591eb781eb0a7b3a56788e5f3b</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index efb9b159f87..9f96bc3b282 100644
    VK_EXT_robustness2                                    DONE (anv, hasvk, hk, kk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
    VK_EXT_sample_locations                               DONE (anv, hasvk, hk, kk, lvp, nvk, radv, tu/a650+, vn)
    VK_EXT_shader_atomic_float                            DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=e2f0c8c1eefd66591eb781eb0a7b3a56788e5f3b</guid>
       <pubDate>Fri, 07 Aug 2026 03:22:49 +0000</pubDate>
