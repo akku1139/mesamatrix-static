@@ -833,3 +833,4 @@
 [2026-07-23T06:45:07.227242+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_VALVE_shader_mixed_float_dot_product.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-07-23T06:45:07.302371+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_VALVE_video_encode_rgb_conversion.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-07-29T07:13:50.136514+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_shader_constant_data.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
+[2026-08-12T05:51:31.562125+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_maintenance11.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
