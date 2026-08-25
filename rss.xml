@@ -5,6 +5,68 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[kk: Support VK_EXT_sampler_filter_minmax on M5+]]></title>
+      <link>http://:?commit=7f8ba6fec7d5447df8f7dbbd40bd5e702b4182cc</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 9ccde97b771..78bbbf46a98 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -486,7 +486,7 @@ Vulkan 1.2 -- all DONE: anv, hk, nvk, panvk, pvr, tu, vn
+   VK_KHR_vulkan_memory_model                            DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+   VK_EXT_descriptor_indexing                            DONE (anv, dzn, kk, lvp, nvk, panvk/v10+, radv, tu, vn)
+   VK_EXT_host_query_reset                               DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_EXT_sampler_filter_minmax                          DONE (anv, lvp, nvk, panvk/v10+, radv, tu, vn)
++  VK_EXT_sampler_filter_minmax                          DONE (anv, kk/apple10+, lvp, nvk, panvk/v10+, radv, tu, vn)
+   VK_EXT_scalar_block_layout                            DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, vn, v3dv/vc7+)
+   VK_EXT_separate_stencil_usage                         DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_shader_viewport_index_layer                    DONE (anv, hasvk, kk, lvp, nvk, radv, tu, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=7f8ba6fec7d5447df8f7dbbd40bd5e702b4182cc</guid>
+      <pubDate>Mon, 24 Aug 2026 11:20:49 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[tu: Advertise VK_EXT_shader_subgroup_ballot]]></title>
+      <link>http://:?commit=6f0333205471a6d894dff5246aeabf3e8ff3d311</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index b1d58bbc5c9..9ccde97b771 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -697,7 +697,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_shader_replicated_composites                   DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_EXT_shader_split_barrier                           DONE (radv/gfx12+, vn)
+   VK_EXT_shader_stencil_export                          DONE (anv, hk, kk, lvp, panvk, radv, tu, vn)
+-  VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
++  VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu/a830+, vn)
+   VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu/a660+, vn)
+   VK_EXT_shader_tile_image                              DONE (panvk/v9+, vn)
+   VK_EXT_shader_uniform_buffer_unsized_array            DONE (anv, hk, nvk, panvk, radv, tu, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=6f0333205471a6d894dff5246aeabf3e8ff3d311</guid>
+      <pubDate>Mon, 24 Aug 2026 06:39:10 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[tu: Advertise VK_EXT_shader_subgroup_vote]]></title>
+      <link>http://:?commit=b00b5dd41a1535a353499f45639935a56e938003</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 5f4d60e4a01..b1d58bbc5c9 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -698,7 +698,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_shader_split_barrier                           DONE (radv/gfx12+, vn)
+   VK_EXT_shader_stencil_export                          DONE (anv, hk, kk, lvp, panvk, radv, tu, vn)
+   VK_EXT_shader_subgroup_ballot                         DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
+-  VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, vn)
++  VK_EXT_shader_subgroup_vote                           DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu/a660+, vn)
+   VK_EXT_shader_tile_image                              DONE (panvk/v9+, vn)
+   VK_EXT_shader_uniform_buffer_unsized_array            DONE (anv, hk, nvk, panvk, radv, tu, vn)
+   VK_EXT_surface_maintenance1                           DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=b00b5dd41a1535a353499f45639935a56e938003</guid>
+      <pubDate>Mon, 24 Aug 2026 06:39:10 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[nvk: Advertise VK_KHR_device_address_commands]]></title>
       <link>http://:?commit=88c960b769045c40b2f5d5c5364c2f64ae178fdf</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +82,7 @@ index f95d97bc0f3..5f4d60e4a01 100644
    VK_KHR_device_fault                                   DONE (radv)
    VK_KHR_display                                        DONE (anv, hasvk, hk, kk, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_KHR_display_swapchain                              not started
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=88c960b769045c40b2f5d5c5364c2f64ae178fdf</guid>
       <pubDate>Fri, 21 Aug 2026 08:23:46 +0000</pubDate>
@@ -2673,69 +2736,6 @@ index 1287a039051..e51987bcd3d 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=7683d552be07d149ee34a7f9be242e441659b26c</guid>
       <pubDate>Tue, 26 May 2026 18:54:24 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[kk: Support VK_KHR_shader_untyped_pointers]]></title>
-      <link>http://:?commit=2d6ad3cba1a84a9c107b2ec8e945dd917da1e49f</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 91a960ae296..1287a039051 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -586,7 +586,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, vn)
-   VK_KHR_shader_relaxed_extended_instruction            DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_shader_subgroup_uniform_control_flow           DONE (anv, hasvk, hk, kk, nvk, panvk/v10+, radv, tu, vn)
--  VK_KHR_shader_untyped_pointers                        DONE (anv, nvk, panvk/v9+, radv, vn)
-+  VK_KHR_shader_untyped_pointers                        DONE (anv, kk, nvk, panvk/v9+, radv, vn)
-   VK_KHR_shared_presentable_image                       not started
-   VK_KHR_surface                                        DONE (anv, dzn, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_surface_maintenance1                           DONE (anv, hk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=2d6ad3cba1a84a9c107b2ec8e945dd917da1e49f</guid>
-      <pubDate>Tue, 26 May 2026 11:09:12 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[nvk: enable VK_KHR_shader_fma]]></title>
-      <link>http://:?commit=a9da8ec49bccd671436ea3af33b8eefe6ee73522</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 51252e12888..91a960ae296 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -581,7 +581,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
-   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
-   VK_KHR_shader_constant_data                           DONE (anv, radv)
--  VK_KHR_shader_fma                                     DONE (kk, radv, vn)
-+  VK_KHR_shader_fma                                     DONE (kk, nvk, radv, vn)
-   VK_KHR_shader_maximal_reconvergence                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, vn)
-   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, vn)
-   VK_KHR_shader_relaxed_extended_instruction            DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=a9da8ec49bccd671436ea3af33b8eefe6ee73522</guid>
-      <pubDate>Mon, 25 May 2026 14:27:51 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[radv: support VK_KHR_shader_fma]]></title>
-      <link>http://:?commit=f43bc8e8be3e922fcbe8fca25507233b0856604b</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 299a6a7514d..51252e12888 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -581,7 +581,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
-   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
-   VK_KHR_shader_constant_data                           DONE (anv, radv)
--  VK_KHR_shader_fma                                     DONE (kk, vn)
-+  VK_KHR_shader_fma                                     DONE (kk, radv, vn)
-   VK_KHR_shader_maximal_reconvergence                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, vn)
-   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, vn)
-   VK_KHR_shader_relaxed_extended_instruction            DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=f43bc8e8be3e922fcbe8fca25507233b0856604b</guid>
-      <pubDate>Mon, 25 May 2026 11:50:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
