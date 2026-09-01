@@ -5,6 +5,47 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panfrost: enable ASTC decode mode on Bifrost (v7)]]></title>
+      <link>http://:?commit=86e10b67e3ac604330e810760a348d88a1840c88</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index da4948a8ceb..282cce45994 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -340,7 +340,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_shader_pixel_local_storage                     DONE (panfrost/v6+)
+   GL_EXT_shader_realtime_clock                          DONE (panfrost/v6+)
+   GL_EXT_sRGB_write_control                             DONE (all drivers that support GLES 3.0+)
+-  GL_EXT_texture_compression_astc_decode_mode           DONE (panfrost)
++  GL_EXT_texture_compression_astc_decode_mode           DONE (panfrost/v7+)
+   GL_EXT_texture_norm16                                 DONE (freedreno, r600, radeonsi, nvc0, softpipe, llvmpipe, virgl, zink, iris, crocus, v3d, panfrost)
+   GL_EXT_texture_sRGB_R8                                DONE (all drivers that support GLES 3.0+)
+   GL_EXT_texture_shadow_lod                             DONE (asahi, crocus/gen6+, iris, llvmpipe, nvc0, radeonsi, r600/evergreen+, virgl)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=86e10b67e3ac604330e810760a348d88a1840c88</guid>
+      <pubDate>Mon, 31 Aug 2026 18:39:24 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[panvk: Implement VK_KHR_shader_constant_data]]></title>
+      <link>http://:?commit=856259554e689ef76f9f6aca22ae5e89a2565811</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index ec291f26c0b..da4948a8ceb 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -584,7 +584,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_shader_abort                                   DONE (radv)
+   VK_KHR_shader_bfloat16                                DONE (anv/gfx12.5+, radv/gfx12+, vn)
+   VK_KHR_shader_clock                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, vn)
+-  VK_KHR_shader_constant_data                           DONE (anv, radv, vn)
++  VK_KHR_shader_constant_data                           DONE (anv, panvk, radv, vn)
+   VK_KHR_shader_fma                                     DONE (anv, kk, nvk, panvk, pvr, radv, vn)
+   VK_KHR_shader_maximal_reconvergence                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, v3dv, vn)
+   VK_KHR_shader_quad_control                            DONE (anv, hk, lvp, nvk, panvk/v10+, radv, v3dv/vc7+, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=856259554e689ef76f9f6aca22ae5e89a2565811</guid>
+      <pubDate>Mon, 31 Aug 2026 09:19:11 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[etnaviv: Expose multisample textures on halti5]]></title>
       <link>http://:?commit=bdc3d65bf1f0426093364ad3052090550df899ae</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -29,6 +70,7 @@ index 28c0db8f937..ec291f26c0b 100644
    GL_ARB_texture_storage_multisample                    DONE (all drivers that support GL_ARB_texture_multisample)
    GL_ARB_vertex_attrib_binding                          DONE (all drivers)
    GS5 Enhanced textureGather                            DONE (freedreno, crocus/gen7+)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=bdc3d65bf1f0426093364ad3052090550df899ae</guid>
       <pubDate>Sat, 29 Aug 2026 18:55:15 +0000</pubDate>
@@ -2477,68 +2519,6 @@ index 19d8802091a..b1fa507ff15 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=879dd9ca8c37b2cedcd8c0b7626e36e57fd1faa3</guid>
       <pubDate>Wed, 03 Jun 2026 06:21:30 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[radv: advertise VK_KHR_device_fault]]></title>
-      <link>http://:?commit=b0ee9510d75aa7781ffdc8fb9ebe382e39a694d7</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index c965042da2d..19d8802091a 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -546,6 +546,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_deferred_host_operations                       DONE (anv, hasvk, lvp, radv, tu, vn)
-   VK_KHR_depth_clamp_zero_one                           DONE (anv, nvk, panvk, radv, tu, vn)
-   VK_KHR_device_address_commands                        DONE (anv, lvp, radv)
-+  VK_KHR_device_fault                                   DONE (radv)
-   VK_KHR_display                                        DONE (anv, hasvk, hk, kk, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_display_swapchain                              not started
-   VK_KHR_external_fence_fd                              DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=b0ee9510d75aa7781ffdc8fb9ebe382e39a694d7</guid>
-      <pubDate>Tue, 02 Jun 2026 13:18:34 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[nvk: Advertises VK_EXT_mesh_shader]]></title>
-      <link>http://:?commit=145b8540e5f3500a81394da432a6300d7cea7be8</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 461d84e703e..c965042da2d 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -662,7 +662,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_map_memory_placed                              DONE (anv, hk, nvk, panvk, pvr, radv, tu, vn)
-   VK_EXT_memory_budget                                  DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_EXT_memory_priority                                DONE (lvp, radv)
--  VK_EXT_mesh_shader                                    DONE (anv/gfx12.5+, lvp, radv, vn)
-+  VK_EXT_mesh_shader                                    DONE (anv/gfx12.5+, lvp, nvk, radv, vn)
-   VK_EXT_multi_draw                                     DONE (anv, hasvk, hk, kk, lvp, nvk, radv, tu, vn, v3dv)
-   VK_EXT_multisampled_render_to_single_sampled          DONE (lvp, vn, panvk, tu)
-   VK_EXT_mutable_descriptor_type                        DONE (anv, hk, kk, lvp, nvk, panvk/v9+, radv, tu, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=145b8540e5f3500a81394da432a6300d7cea7be8</guid>
-      <pubDate>Tue, 02 Jun 2026 10:34:32 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[vulkan: implement VK_EXT_debug_marker]]></title>
-      <link>http://:?commit=020a6bc28265ad967735e6f11818810a9134e9a1</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 3aaf171d09b..461d84e703e 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -615,7 +615,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_conservative_rasterization                     DONE (anv, nvk, panvk/v11+, radv, vn, tu/a7xx+)
-   VK_EXT_custom_border_color                            DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_custom_resolve                                 DONE (radv, tu)
--  VK_EXT_debug_marker                                   DONE (radv)
-+  VK_EXT_debug_marker                                   DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_debug_report                                   DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_debug_utils                                    DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_depth_bias_control                             DONE (anv, hk, lvp, nvk, panvk, radv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=020a6bc28265ad967735e6f11818810a9134e9a1</guid>
-      <pubDate>Mon, 01 Jun 2026 15:31:38 +0000</pubDate>
     </item>
   </channel>
 </rss>
