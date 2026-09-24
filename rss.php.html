@@ -5,6 +5,68 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[pvr, pco: add support for VK_EXT_image_sliced_view_of_3d]]></title>
+      <link>http://:?commit=5263e0674c61d7eb8cd92046e6a3a8546f9f246c</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 50b1af2a933..b105ca657c4 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -658,7 +658,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_image_compression_control                      DONE (anv/gfx12-, radv, tu)
+   VK_EXT_image_compression_control_swapchain            DONE (radv, tu)
+   VK_EXT_image_drm_format_modifier                      DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_EXT_image_sliced_view_of_3d                        DONE (anv, hk, lvp, nvk, panvk, radv/gfx10+, vn)
++  VK_EXT_image_sliced_view_of_3d                        DONE (anv, hk, lvp, nvk, panvk, pvr, radv/gfx10+, vn)
+   VK_EXT_image_view_min_lod                             DONE (anv, hasvk, hk, nvk, panvk, radv, tu, vn)
+   VK_EXT_index_type_uint8                               DONE (anv, hasvk, hk, kk, nvk, lvp, panvk, pvr, radv/gfx8+, tu, v3dv, vn)
+   VK_EXT_legacy_dithering                               DONE (anv, panvk, tu, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=5263e0674c61d7eb8cd92046e6a3a8546f9f246c</guid>
+      <pubDate>Wed, 23 Sep 2026 15:11:03 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[pvr: add VK_KHR_push_descriptor to the docs]]></title>
+      <link>http://:?commit=6bdc6360ebf5ad1fae57487673a6fec249837da2</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index cbe3f948801..50b1af2a933 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -528,7 +528,7 @@ Vulkan 1.4 -- all DONE: anv, hk, lvp, nvk, panvk/v10+, radv/gfx8+, tu/a7xx+, vn
+   VK_KHR_maintenance5                                   DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_maintenance6                                   DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_map_memory2                                    DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+-  VK_KHR_push_descriptor                                DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
++  VK_KHR_push_descriptor                                DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_KHR_shader_expect_assume                           DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_shader_float_controls2                         DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_KHR_shader_subgroup_rotate                         DONE (anv, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv/vc7+, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=6bdc6360ebf5ad1fae57487673a6fec249837da2</guid>
+      <pubDate>Wed, 23 Sep 2026 13:55:05 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[etnaviv: Expose stream output on HALTI2+ without HWTFB]]></title>
+      <link>http://:?commit=e3f361606e3f2b307e24f220baa5ee72dcc20fe3</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 43dde5358dc..cbe3f948801 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -54,7 +54,7 @@ GL 3.0, GLSL 1.30 --- all DONE: freedreno, nv50, nvc0, r600, radeonsi, llvmpipe,
+   GL_EXT_draw_buffers2 (Per-buffer blend and masks)     DONE (v3d, etnaviv/HALTI5)
+   GL_EXT_texture_compression_rgtc                       DONE (all drivers that support GL_EXT_texture_snorm)
+   GL_ARB_texture_rg                                     DONE (v3d, lima, etnaviv/HALTI5)
+-  GL_EXT_transform_feedback (Transform feedback)        DONE (v3d, etnaviv/HWTFB)
++  GL_EXT_transform_feedback (Transform feedback)        DONE (v3d, etnaviv/HALTI2)
+   GL_ARB_vertex_array_object (Vertex array objects)     DONE (v3d, vc4, lima, etnaviv)
+   GL_EXT_framebuffer_sRGB (sRGB framebuffer format)     DONE (v3d, vc4, lima, etnaviv/HALTI3)
+   glClearBuffer commands                                DONE
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=e3f361606e3f2b307e24f220baa5ee72dcc20fe3</guid>
+      <pubDate>Wed, 23 Sep 2026 08:19:09 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: Advertise VK_EXT_swapchain_colorspace]]></title>
       <link>http://:?commit=eef8db800ac8d0c8b5e0e3f8849b29671cdbca1b</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +82,7 @@ index c3bee16a0de..43dde5358dc 100644
    VK_EXT_swapchain_maintenance1                         DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_EXT_transform_feedback                             DONE (anv, hasvk, hk, lvp, nvk, radv, tu, vn)
    VK_EXT_vertex_attribute_divisor                       DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=eef8db800ac8d0c8b5e0e3f8849b29671cdbca1b</guid>
       <pubDate>Mon, 21 Sep 2026 10:18:05 +0000</pubDate>
@@ -2137,69 +2200,6 @@ index a1e713be253..8b5c185318d 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=c4b917d527201516ffadf14929dad924dbfac7d9</guid>
       <pubDate>Fri, 26 Jun 2026 09:08:18 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[doc/features.txt: enable VK_KHR_shader_float16_int8 for v3dv]]></title>
-      <link>http://:?commit=8b28b4d615999390455c237e38ed921881c21de7</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 1a0b5080415..a1e713be253 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -477,7 +477,7 @@ Vulkan 1.2 -- all DONE: anv, hk, nvk, panvk/v10+, pvr, tu, vn
-   VK_KHR_sampler_mirror_clamp_to_edge                   DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_separate_depth_stencil_layouts                 DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_shader_atomic_int64                            DONE (anv, lvp, nvk, panvk/v10+, radv, vn, tu/a740+)
--  VK_KHR_shader_float16_int8                            DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, radv, tu, vn)
-+  VK_KHR_shader_float16_int8                            DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_KHR_shader_float_controls                          DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_shader_subgroup_extended_types                 DONE (anv, hasvk, kk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
-   VK_KHR_spirv_1_4                                      DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk/v10+, pvr, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=8b28b4d615999390455c237e38ed921881c21de7</guid>
-      <pubDate>Thu, 25 Jun 2026 11:36:20 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Advertise VK_KHR_workgroup_memory_explicit_layout]]></title>
-      <link>http://:?commit=fa73219978f86c7a2508a7e47aa7ce7d3e076bd4</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index e4c700a0045..1a0b5080415 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -600,7 +600,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_wayland_surface                                DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_win32_keyed_mutex                              not started
-   VK_KHR_win32_surface                                  DONE (dzn, lvp)
--  VK_KHR_workgroup_memory_explicit_layout               DONE (anv, hk, kk, lvp, nvk, hasvk, pvr, radv, tu, v3dv, vn)
-+  VK_KHR_workgroup_memory_explicit_layout               DONE (anv, hk, kk, lvp, nvk, hasvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_xcb_surface                                    DONE (anv, dzn, hasvk, kk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_xlib_surface                                   DONE (anv, dzn, hasvk, kk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_acquire_drm_display                            DONE (anv, hasvk, hk, kk, nvk, panvk, radv, tu, v3dv, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=fa73219978f86c7a2508a7e47aa7ce7d3e076bd4</guid>
-      <pubDate>Thu, 25 Jun 2026 10:39:17 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Advertise VK_KHR_internally_synchronized_queues]]></title>
-      <link>http://:?commit=3b1f86d437fe61e740b75bee058737c5a8d65db9</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 61ac8ebcdbd..e4c700a0045 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -560,7 +560,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_get_display_properties2                        DONE (anv, hasvk, hk, kk, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_get_surface_capabilities2                      DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_KHR_incremental_present                            DONE (anv, hasvk, hk, lvp, nvk, pvr, radv, tu, v3dv, vn)
--  VK_KHR_internally_synchronized_queues                 DONE (anv, radv, tu)
-+  VK_KHR_internally_synchronized_queues                 DONE (anv, panvk, radv, tu)
-   VK_KHR_maintenance7                                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, tu, vn)
-   VK_KHR_maintenance8                                   DONE (anv, hk, kk, lvp, nvk, panvk/v10+, radv, tu)
-   VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=3b1f86d437fe61e740b75bee058737c5a8d65db9</guid>
-      <pubDate>Wed, 24 Jun 2026 08:36:58 +0000</pubDate>
     </item>
   </channel>
 </rss>
