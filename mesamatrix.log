@@ -843,3 +843,4 @@
 [2026-09-09T09:03:28.463259+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_NV_shader_atomic_float16_vector.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-09-22T09:24:13.051553+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_split_barrier.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-09-22T09:24:13.142942+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_shader_tile_image.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
+[2026-09-26T09:27:00.274072+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_image_compression_control_swapchain.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
