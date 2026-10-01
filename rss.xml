@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs: Add GLES3 line]]></title>
+      <link>http://:?commit=30da39187d8d3cf03c58ecd2bebb497b84501f51</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 5effcd80a10..0437f35724d 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -240,6 +240,8 @@ GL 4.6, GLSL 4.60 -- all DONE: radeonsi, virgl, zink, iris, crocus/gen7+, d3d12,
+   GL_ARB_transform_feedback_overflow_query              DONE (freedreno/a6xx+, nvc0, softpipe, crocus/gen6+, r600/evergreen+)
+   GL_KHR_no_error                                       DONE (all drivers)
+ 
++GLES3.0, GLSL ES 3.0 -- all DONE: freedreno, nv50, nvc0, r600, radeonsi, llvmpipe, softpipe, virgl, zink, d3d12, panfrost, asahi, iris, crocus/gen6+, v3d, etnaviv/HALTI5
++
+ These are the extensions cherry-picked to make GLES 3.1
+ GLES3.1, GLSL ES 3.1 -- all DONE: freedreno/a5xx+, nvc0, r600, radeonsi, virgl, v3d, softpipe, llvmpipe, zink, panfrost, d3d12, iris, crocus/gen7.5+, asahi
+ 
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=30da39187d8d3cf03c58ecd2bebb497b84501f51</guid>
+      <pubDate>Wed, 30 Sep 2026 17:20:58 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: advertise VK_ANDROID_external_format_resolve on v10+]]></title>
       <link>http://:?commit=83cda621398dec43a211a3783e291a51af700c5e</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +39,7 @@ index 31fd2cb8f73..5effcd80a10 100644
    VK_ANDROID_external_memory_android_hardware_buffer    DONE (anv, hasvk, lvp, panvk, radv, tu, v3dv, vn)
    VK_ANDROID_native_buffer                              DONE (anv, hasvk, lvp, panvk, radv, tu, v3dv, vn)
    VK_ARM_rasterization_order_attachment_access          DONE (lvp, panvk/v10+, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=83cda621398dec43a211a3783e291a51af700c5e</guid>
       <pubDate>Mon, 28 Sep 2026 21:28:23 +0000</pubDate>
@@ -2194,27 +2215,6 @@ index dc792cc5efc..e89d35ab9e6 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=59627d905b7b1fa0ae9078a7aad34e072026fa9f</guid>
       <pubDate>Thu, 02 Jul 2026 18:10:06 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[panvk: Advertise VK_EXT_device_address_binding_report]]></title>
-      <link>http://:?commit=d6e1ed833b49c81572a80ad99b8c0d2fd0f385c8</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 37245ae6fe3..dc792cc5efc 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -628,7 +628,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_depth_range_unrestricted                       DONE (anv/gen20+, nvk, radv, lvp, vn)
-   VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, radv, tu)
-   VK_EXT_descriptor_heap                                DONE (anv, radv, vn)
--  VK_EXT_device_address_binding_report                  DONE (anv, radv, tu)
-+  VK_EXT_device_address_binding_report                  DONE (anv, panvk, radv, tu)
-   VK_EXT_device_fault                                   DONE (radv)
-   VK_EXT_device_generated_commands                      DONE (anv, lvp, nvk/Turing+, radv/gfx8+)
-   VK_EXT_device_memory_report                           DONE (anv, panvk, pvr, radv, tu, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=d6e1ed833b49c81572a80ad99b8c0d2fd0f385c8</guid>
-      <pubDate>Wed, 01 Jul 2026 09:23:49 +0000</pubDate>
     </item>
   </channel>
 </rss>
