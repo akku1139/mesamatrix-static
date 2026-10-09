@@ -847,3 +847,4 @@
 [2026-09-29T10:49:06.364921+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_ANDROID_external_format_resolve.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-10-02T10:37:22.035137+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_QCOM_rotated_copy_commands.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-10-07T11:12:46.508530+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_extended_flags.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
+[2026-10-09T11:26:06.110255+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_AMD_anti_lag.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
