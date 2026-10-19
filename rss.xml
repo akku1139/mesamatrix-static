@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk: Advertise VK_EXT_vertex_attribute_robustness]]></title>
+      <link>http://:?commit=a2b6d5096ebee791427214cba47282788ef4e048</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 57f7520a661..669edad4200 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -711,7 +711,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_swapchain_maintenance1                         DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_transform_feedback                             DONE (anv, hasvk, hk, lvp, nvk, pvr, radv, tu, vn)
+   VK_EXT_vertex_attribute_divisor                       DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_EXT_vertex_attribute_robustness                    DONE (kk, vn)
++  VK_EXT_vertex_attribute_robustness                    DONE (kk, panvk, vn)
+   VK_EXT_vertex_input_dynamic_state                     DONE (anv, hk, lvp, nvk, panvk, radv, tu, vn)
+   VK_EXT_ycbcr_image_arrays                             DONE (anv, hasvk, hk, lvp, nvk, panvk/v10+, radv, vn)
+   VK_EXT_zero_initialize_device_memory                  DONE (lvp, nvk, panvk, pvr, radv, tu, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=a2b6d5096ebee791427214cba47282788ef4e048</guid>
+      <pubDate>Mon, 19 Oct 2026 03:24:39 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[docs/lvp: amend to advertise implemented extensions]]></title>
       <link>http://:?commit=7ad0050135bc85fd257699a31df92dafeec48d8a</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -75,6 +95,7 @@ index 59204f80687..57f7520a661 100644
    VK_NV_shader_atomic_float16_vector                    DONE (nvk)
    VK_NVX_image_view_handle                              DONE (nvk)
    VK_QCOM_fragment_density_map_offset                   DONE (tu)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=7ad0050135bc85fd257699a31df92dafeec48d8a</guid>
       <pubDate>Wed, 14 Oct 2026 03:44:05 +0000</pubDate>
@@ -1928,47 +1949,6 @@ index 06ee2da7ec2..49a72182f0b 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=d3d45a7fb41433149924d0bbbf9d9bd1ddb9c33a</guid>
       <pubDate>Wed, 22 Jul 2026 11:46:38 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[pvr: add support for VK_IMG_filter_linear_2d]]></title>
-      <link>http://:?commit=ea0b576287a3c7de57e3807392b891fb53559713</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 67afcf3ae22..06ee2da7ec2 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -738,7 +738,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_GOOGLE_hlsl_functionality1                         DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
-   VK_GOOGLE_user_type                                   DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
-   VK_IMG_filter_cubic                                   DONE (tu/a650+, vn)
--  VK_IMG_filter_linear_2d                               not started
-+  VK_IMG_filter_linear_2d                               DONE (pvr)
-   VK_INTEL_shader_integer_functions2                    DONE (anv, hasvk, radv)
-   VK_MESA_image_alignment_control                       DONE (anv, nvk, radv)
-   VK_NV_compute_shader_derivatives                      DONE (anv, hasvk, nvk, radv, tu, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=ea0b576287a3c7de57e3807392b891fb53559713</guid>
-      <pubDate>Fri, 17 Jul 2026 12:53:57 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[docs/features: track VK_IMG_filter_linear_2d]]></title>
-      <link>http://:?commit=a4de2b5f69ee352449745a1e1462a391f2db20bc</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 7c98814c394..67afcf3ae22 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -738,6 +738,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_GOOGLE_hlsl_functionality1                         DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
-   VK_GOOGLE_user_type                                   DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, vn)
-   VK_IMG_filter_cubic                                   DONE (tu/a650+, vn)
-+  VK_IMG_filter_linear_2d                               not started
-   VK_INTEL_shader_integer_functions2                    DONE (anv, hasvk, radv)
-   VK_MESA_image_alignment_control                       DONE (anv, nvk, radv)
-   VK_NV_compute_shader_derivatives                      DONE (anv, hasvk, nvk, radv, tu, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=a4de2b5f69ee352449745a1e1462a391f2db20bc</guid>
-      <pubDate>Fri, 17 Jul 2026 12:53:57 +0000</pubDate>
     </item>
   </channel>
 </rss>
