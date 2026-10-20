@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[pvr: advertise VK_KHR_internally_synchronized_queues]]></title>
+      <link>http://:?commit=a8dd2d8c959f8dcc52ae4950cecdfcd83b4176bc</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 669edad4200..26566587750 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -564,7 +564,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_KHR_get_display_properties2                        DONE (anv, hasvk, hk, kk, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_get_surface_capabilities2                      DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_incremental_present                            DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_KHR_internally_synchronized_queues                 DONE (anv, nvk, panvk, radv, tu)
++  VK_KHR_internally_synchronized_queues                 DONE (anv, nvk, panvk, pvr, radv, tu)
+   VK_KHR_maintenance7                                   DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_KHR_maintenance8                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, vn)
+   VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=a8dd2d8c959f8dcc52ae4950cecdfcd83b4176bc</guid>
+      <pubDate>Tue, 20 Oct 2026 04:56:01 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[panvk: Advertise VK_EXT_vertex_attribute_robustness]]></title>
       <link>http://:?commit=a2b6d5096ebee791427214cba47282788ef4e048</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index 57f7520a661..669edad4200 100644
    VK_EXT_vertex_input_dynamic_state                     DONE (anv, hk, lvp, nvk, panvk, radv, tu, vn)
    VK_EXT_ycbcr_image_arrays                             DONE (anv, hasvk, hk, lvp, nvk, panvk/v10+, radv, vn)
    VK_EXT_zero_initialize_device_memory                  DONE (lvp, nvk, panvk, pvr, radv, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=a2b6d5096ebee791427214cba47282788ef4e048</guid>
       <pubDate>Mon, 19 Oct 2026 03:24:39 +0000</pubDate>
