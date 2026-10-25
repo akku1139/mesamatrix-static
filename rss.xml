@@ -5,6 +5,61 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[asahi: semaphore_create]]></title>
+      <link>http://:?commit=1f9035d9c04ca391a58155159027b1d85fba8be8</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 5bcf27612d6..543e9f39838 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -900,9 +900,9 @@ Rusticl extensions:
+   cl_khr_external_memory_dma_buf                        not started
+   cl_khr_external_memory_opaque_fd                      not started
+   cl_khr_external_memory_win32                          not started
+-  cl_khr_external_semaphore                             DONE (iris, radeonsi, zink)
++  cl_khr_external_semaphore                             DONE (asahi, iris, radeonsi, zink)
+   cl_khr_external_semaphore_opaque_fd                   not started
+-  cl_khr_external_semaphore_sync_fd                     DONE (iris, radeonsi, zink)
++  cl_khr_external_semaphore_sync_fd                     DONE (asahi, iris, radeonsi, zink)
+   cl_khr_external_semaphore_win32                       not started
+   cl_khr_fp16                                           DONE (asahi, freedreno, llvmpipe, panfrost, radeonsi, zink)
+   cl_khr_gl_depth_images                                not started
+@@ -918,7 +918,7 @@ Rusticl extensions:
+   cl_khr_mipmap_image_writes                            not started
+   cl_khr_pci_bus_info                                   DONE (iris, nvc0, radeonsi, zink)
+   cl_khr_priority_hints                                 DONE (asahi, freedreno, iris, panfrost, radeonsi)
+-  cl_khr_semaphore                                      DONE (iris, radeonsi, zink)
++  cl_khr_semaphore                                      DONE (asahi, iris, radeonsi, zink)
+   cl_khr_spirv_extended_debug_info                      not started
+   cl_khr_spirv_linkonce_odr                             DONE
+   cl_khr_spirv_no_integer_wrap_decoration               DONE
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=1f9035d9c04ca391a58155159027b1d85fba8be8</guid>
+      <pubDate>Sat, 24 Oct 2026 10:20:53 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[asahi: implement fence_server_signal]]></title>
+      <link>http://:?commit=5cf31afb39c3831368ac8c7d0587598b5af940ff</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 8aa62c82df6..5bcf27612d6 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -334,8 +334,8 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_multisampled_render_to_texture                 DONE (freedreno/a6xx, panfrost, zink, lima)
+   GL_EXT_polygon_offset_clamp                           DONE (all drivers that support GL_ARB_polygon_offset_clamp)
+   GL_EXT_render_snorm                                   DONE (freedreno/a6xx, r600, radeonsi, softpipe, llvmpipe, virgl, zink, panfrost/v6+, iris, asahi)
+-  GL_EXT_semaphore                                      DONE (radeonsi, zink, d3d12, iris, crocus)
+-  GL_EXT_semaphore_fd                                   DONE (radeonsi, zink, iris, crocus)
++  GL_EXT_semaphore                                      DONE (asahi, radeonsi, zink, d3d12, iris, crocus)
++  GL_EXT_semaphore_fd                                   DONE (asahi, radeonsi, zink, iris, crocus)
+   GL_EXT_semaphore_win32                                DONE (zink, d3d12)
+   GL_EXT_shader_clock                                   DONE (all drivers that support GL_ARB_shader_clock)
+   GL_EXT_shader_group_vote                              DONE (all drivers that support GL_ARB_shader_group_vote)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=5cf31afb39c3831368ac8c7d0587598b5af940ff</guid>
+      <pubDate>Sat, 24 Oct 2026 10:20:53 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[docs/features: amend to advertise implemented extensions on pvr]]></title>
       <link>http://:?commit=d3e1c9f7b11dbdfe9369d680ef283ec85e46f98d</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -29,6 +84,7 @@ index 9133a609f5d..8aa62c82df6 100644
    VK_EXT_subgroup_size_control                          DONE (anv, dzn, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_EXT_texel_buffer_alignment                         DONE (anv, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_EXT_texture_compression_astc_hdr                   DONE (panvk, tu, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=d3e1c9f7b11dbdfe9369d680ef283ec85e46f98d</guid>
       <pubDate>Fri, 23 Oct 2026 08:48:59 +0000</pubDate>
