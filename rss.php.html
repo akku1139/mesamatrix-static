@@ -5,6 +5,28 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs/features: Add missing freedreno to GL_EXT_semaphore[_fd] features.]]></title>
+      <link>http://:?commit=fe76729cd6e8766dbdbda8c97de1f05a7197d364</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 543e9f39838..6e8330d4223 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -334,8 +334,8 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_multisampled_render_to_texture                 DONE (freedreno/a6xx, panfrost, zink, lima)
+   GL_EXT_polygon_offset_clamp                           DONE (all drivers that support GL_ARB_polygon_offset_clamp)
+   GL_EXT_render_snorm                                   DONE (freedreno/a6xx, r600, radeonsi, softpipe, llvmpipe, virgl, zink, panfrost/v6+, iris, asahi)
+-  GL_EXT_semaphore                                      DONE (asahi, radeonsi, zink, d3d12, iris, crocus)
+-  GL_EXT_semaphore_fd                                   DONE (asahi, radeonsi, zink, iris, crocus)
++  GL_EXT_semaphore                                      DONE (asahi, crocus, d3d12, freedreno, iris, radeonsi, zink)
++  GL_EXT_semaphore_fd                                   DONE (asahi, crocus, freedreno, iris, radeonsi, zink)
+   GL_EXT_semaphore_win32                                DONE (zink, d3d12)
+   GL_EXT_shader_clock                                   DONE (all drivers that support GL_ARB_shader_clock)
+   GL_EXT_shader_group_vote                              DONE (all drivers that support GL_ARB_shader_group_vote)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=fe76729cd6e8766dbdbda8c97de1f05a7197d364</guid>
+      <pubDate>Sun, 25 Oct 2026 19:56:50 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[asahi: semaphore_create]]></title>
       <link>http://:?commit=1f9035d9c04ca391a58155159027b1d85fba8be8</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -32,6 +54,7 @@ index 5bcf27612d6..543e9f39838 100644
    cl_khr_spirv_extended_debug_info                      not started
    cl_khr_spirv_linkonce_odr                             DONE
    cl_khr_spirv_no_integer_wrap_decoration               DONE
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=1f9035d9c04ca391a58155159027b1d85fba8be8</guid>
       <pubDate>Sat, 24 Oct 2026 10:20:53 +0000</pubDate>
