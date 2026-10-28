@@ -1365,3 +1365,4 @@
 [2026-10-21T09:29:33.366461+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_VALVE_mutable_descriptor_type.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-10-21T09:29:33.510013+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_VALVE_shader_mixed_float_dot_product.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-10-21T09:29:33.627739+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_VALVE_video_encode_rgb_conversion.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
+[2026-10-28T10:42:44.706095+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_shader_constant_data.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
