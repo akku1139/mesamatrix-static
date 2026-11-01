@@ -5,6 +5,46 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[freedreno/a5xx: enable EXT_demote_to_helper_invocation]]></title>
+      <link>http://:?commit=cc5680bbcdc5c033b545295281142e19403a17e7</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index ad43b878708..0cf546c82ae 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -326,7 +326,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_clear_texture                                  DONE (all drivers)
+   GL_EXT_color_buffer_half_float                        DONE (freedreno, iris, llvmpipe, nv50, nvc0, radeonsi, virgl, zink, crocus, asahi, v3d, panfrost)
+   GL_EXT_conservative_depth                             DONE (all drivers that support GLES 3.0+)
+-  GL_EXT_demote_to_helper_invocation                    DONE (crocus, freedreno/a6xx, iris, nvc0, radeonsi, zink)
++  GL_EXT_demote_to_helper_invocation                    DONE (crocus, freedreno/a5xx+, iris, nvc0, radeonsi, zink)
+   GL_EXT_depth_bounds_test                              DONE (freedreno/a6xx, nv50, nvc0, radeonsi, softpipe, zink, iris/gen12+)
+   GL_EXT_memory_object                                  DONE (freedreno, radeonsi, llvmpipe, zink, d3d12, iris, crocus/gen7+)
+   GL_EXT_memory_object_fd                               DONE (freedreno, radeonsi, llvmpipe, zink, iris, crocus/gen7+)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=cc5680bbcdc5c033b545295281142e19403a17e7</guid>
+      <pubDate>Sun, 01 Nov 2026 00:22:43 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[docs/features: add GL_EXT_demote_to_helper_invocation]]></title>
+      <link>http://:?commit=af142ef6b6d95bc1a224c864b32b30643acc27f6</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 1f65b414014..ad43b878708 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -326,6 +326,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_clear_texture                                  DONE (all drivers)
+   GL_EXT_color_buffer_half_float                        DONE (freedreno, iris, llvmpipe, nv50, nvc0, radeonsi, virgl, zink, crocus, asahi, v3d, panfrost)
+   GL_EXT_conservative_depth                             DONE (all drivers that support GLES 3.0+)
++  GL_EXT_demote_to_helper_invocation                    DONE (crocus, freedreno/a6xx, iris, nvc0, radeonsi, zink)
+   GL_EXT_depth_bounds_test                              DONE (freedreno/a6xx, nv50, nvc0, radeonsi, softpipe, zink, iris/gen12+)
+   GL_EXT_memory_object                                  DONE (freedreno, radeonsi, llvmpipe, zink, d3d12, iris, crocus/gen7+)
+   GL_EXT_memory_object_fd                               DONE (freedreno, radeonsi, llvmpipe, zink, iris, crocus/gen7+)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=af142ef6b6d95bc1a224c864b32b30643acc27f6</guid>
+      <pubDate>Sun, 01 Nov 2026 00:22:43 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[v3dv: expose VK_KHR_maintenance8]]></title>
       <link>http://:?commit=8dd93f46cb112190d7290ddce32d2f773b73adca</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +60,7 @@ index fd36840de82..1f65b414014 100644
    VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, vn)
    VK_KHR_maintenance10                                  DONE (anv, hk, kk, lvp, nvk, panvk, radv, vn)
    VK_KHR_maintenance11                                  DONE (anv, lvp, nvk, panvk, radv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=8dd93f46cb112190d7290ddce32d2f773b73adca</guid>
       <pubDate>Wed, 28 Oct 2026 13:45:50 +0000</pubDate>
