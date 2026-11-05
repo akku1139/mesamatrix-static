@@ -5,6 +5,51 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[rusticl: implement cl_khr_external_memory]]></title>
+      <link>http://:?commit=0848c37191edeb6572363577a351fb6ab2d2c4f8</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 42857fff7e0..b09e94feda7 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -898,9 +898,9 @@ Rusticl extensions:
+   cl_khr_egl_image                                      not started
+   cl_khr_expect_assume                                  in progress (hints are ignored)
+   cl_khr_extended_async_copies                          not started
+-  cl_khr_external_memory                                not started
+-  cl_khr_external_memory_dma_buf                        not started
+-  cl_khr_external_memory_opaque_fd                      not started
++  cl_khr_external_memory                                DONE (iris, radeonsi, zink)
++  cl_khr_external_memory_dma_buf                        DONE (iris, radeonsi, zink)
++  cl_khr_external_memory_opaque_fd                      DONE (iris, radeonsi, zink)
+   cl_khr_external_memory_win32                          not started
+   cl_khr_external_semaphore                             DONE (asahi, iris, radeonsi, zink)
+   cl_khr_external_semaphore_opaque_fd                   not started
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=0848c37191edeb6572363577a351fb6ab2d2c4f8</guid>
+      <pubDate>Thu, 05 Nov 2026 01:38:59 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[docs: advertise v3d for GL_OES_texture_cube_map_array]]></title>
+      <link>http://:?commit=1b60c2e3bd66612554b27c065ceebb239e8296c0</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 752d5e9807b..42857fff7e0 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -292,7 +292,7 @@ GLES3.2, GLSL ES 3.2 -- all DONE: freedreno/a6xx, radeonsi, virgl, llvmpipe, zin
+   GL_OES_tessellation_shader                            DONE (freedreno/a6xx, all drivers that support GL_ARB_tessellation_shader)
+   GL_OES_texture_border_clamp                           DONE (all drivers)
+   GL_OES_texture_buffer                                 DONE (freedreno, nvc0, r600, softpipe, panfrost, crocus/gen6+)
+-  GL_OES_texture_cube_map_array                         DONE (freedreno/a4xx+, nvc0, r600, softpipe)
++  GL_OES_texture_cube_map_array                         DONE (freedreno/a4xx+, nvc0, r600, softpipe, v3d)
+   GL_OES_texture_stencil8                               DONE (all drivers that support GL_ARB_texture_stencil8)
+   GL_OES_texture_storage_multisample_2d_array           DONE (all drivers that support GL_ARB_texture_multisample)
+ 
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=1b60c2e3bd66612554b27c065ceebb239e8296c0</guid>
+      <pubDate>Wed, 04 Nov 2026 12:12:55 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[radv: advertise VK_KHR_maintenance12]]></title>
       <link>http://:?commit=02d195a3e22b968f8cc764e1f1422a1ef77758ab</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -19,6 +64,7 @@ index 336f61c7c21..752d5e9807b 100644
    VK_KHR_performance_query                              DONE (anv, radv/gfx10.3+, tu, v3dv)
    VK_KHR_pipeline_binary                                DONE (anv, hk, nvk, panvk, radv)
    VK_KHR_pipeline_executable_properties                 DONE (anv, hasvk, hk, nvk, panvk, pvr, radv, tu, v3dv)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=02d195a3e22b968f8cc764e1f1422a1ef77758ab</guid>
       <pubDate>Tue, 03 Nov 2026 19:42:04 +0000</pubDate>
@@ -1795,85 +1841,6 @@ index 25ea07f52dd..4a656dcd7fd 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=1223e3291798768adcd4ae4e6c89bccfe0c68e12</guid>
       <pubDate>Fri, 07 Aug 2026 03:22:46 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[iris: implement pipe_screen::semaphore_create]]></title>
-      <link>http://:?commit=499e898a36135dd905ca2e15c9d6bad8b67f7191</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 925a7d0a240..25ea07f52dd 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -890,9 +890,9 @@ Rusticl extensions:
-   cl_khr_external_memory_dma_buf                        not started
-   cl_khr_external_memory_opaque_fd                      not started
-   cl_khr_external_memory_win32                          not started
--  cl_khr_external_semaphore                             DONE (radeonsi, zink)
-+  cl_khr_external_semaphore                             DONE (iris, radeonsi, zink)
-   cl_khr_external_semaphore_opaque_fd                   not started
--  cl_khr_external_semaphore_sync_fd                     DONE (radeonsi, zink)
-+  cl_khr_external_semaphore_sync_fd                     DONE (iris, radeonsi, zink)
-   cl_khr_external_semaphore_win32                       not started
-   cl_khr_fp16                                           DONE (asahi, freedreno, llvmpipe, panfrost, radeonsi, zink)
-   cl_khr_gl_depth_images                                not started
-@@ -908,7 +908,7 @@ Rusticl extensions:
-   cl_khr_mipmap_image_writes                            not started
-   cl_khr_pci_bus_info                                   DONE (iris, nvc0, radeonsi, zink)
-   cl_khr_priority_hints                                 DONE (asahi, freedreno, iris, panfrost, radeonsi)
--  cl_khr_semaphore                                      DONE (radeonsi, zink)
-+  cl_khr_semaphore                                      DONE (iris, radeonsi, zink)
-   cl_khr_spirv_extended_debug_info                      not started
-   cl_khr_spirv_linkonce_odr                             DONE
-   cl_khr_spirv_no_integer_wrap_decoration               DONE
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=499e898a36135dd905ca2e15c9d6bad8b67f7191</guid>
-      <pubDate>Thu, 06 Aug 2026 22:04:40 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[rusticl: add basic support for cl_ext_float_atomics]]></title>
-      <link>http://:?commit=524a1411b67c623857732d11a2bc1bb2a1a7505d</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 79e974fc4b6..925a7d0a240 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -925,7 +925,11 @@ Rusticl extensions:
-   cl_ext_buffer_device_address                          DONE (iris, llvmpipe, radeonsi, zink)
-   cl_ext_cxx_for_opencl                                 not started
-   cl_ext_device_fission                                 not started
--  cl_ext_float_atomics                                  not started
-+  cl_ext_float_atomics                                  in progress
-+  - FP_ATOMIC_ADD_EXT                                   DONE (llvmpipe, zink)
-+  - FP_ATOMIC_MIN_MAX_EXT                               DONE (iris, llvmpipe)
-+  - fp16                                                not started
-+  - fp64                                                not started
-   cl_ext_image_from_buffer                              not started
-   cl_ext_image_raw10_raw12                              not started
-   cl_ext_image_requirements_info                        not started
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=524a1411b67c623857732d11a2bc1bb2a1a7505d</guid>
-      <pubDate>Thu, 06 Aug 2026 13:31:36 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[docs/features: Mark VK_KHR_maintenance9 as done on Turnip]]></title>
-      <link>http://:?commit=ee6bb7e763848cb32bb706e0a03636c7ad976190</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index e0d4e3a8434..79e974fc4b6 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -564,7 +564,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_internally_synchronized_queues                 DONE (anv, panvk, radv, tu)
-   VK_KHR_maintenance7                                   DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
-   VK_KHR_maintenance8                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, vn)
--  VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, vn)
-+  VK_KHR_maintenance9                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, vn)
-   VK_KHR_maintenance10                                  DONE (anv, kk, lvp, nvk, radv, vn)
-   VK_KHR_maintenance11                                  DONE (anv, lvp, radv, vn)
-   VK_KHR_performance_query                              DONE (anv, radv/gfx10.3, radv/gfx11, tu, v3dv)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=ee6bb7e763848cb32bb706e0a03636c7ad976190</guid>
-      <pubDate>Thu, 06 Aug 2026 07:28:40 +0000</pubDate>
     </item>
   </channel>
 </rss>
