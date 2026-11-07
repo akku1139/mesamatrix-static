@@ -5,6 +5,25 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[rusticl: support cl_khr_icd_unloadable]]></title>
+      <link>http://:?commit=09e600cd279bfab8d323cedf2fbd07888519458e</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 03863c88308..3f6ab7d5115 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -912,6 +912,7 @@ Rusticl extensions:
+   cl_khr_gl_msaa_sharing                                not started
+   cl_khr_gl_sharing                                     DONE (freedreno, iris, radeonsi, zink)
+   cl_khr_icd                                            DONE
++  cl_khr_icd_unloadable                                 DONE
+   cl_khr_initialize_memory                              not started
+   cl_khr_int64_base_atomics                             not started
+   cl_khr_int64_extended_atomics                         not started
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=09e600cd279bfab8d323cedf2fbd07888519458e</guid>
+      <pubDate>Fri, 06 Nov 2026 18:53:03 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[rusticl: implement cl_arm_import_memory{,_dma_buf}]]></title>
       <link>http://:?commit=6eb0d201034b08fd7bce89ce52eb0009e61d9ce1</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -23,6 +42,7 @@ index b09e94feda7..03863c88308 100644
    cl_arm_non_uniform_work_group_size                    not started
    cl_arm_shared_virtual_memory                          in progress (nvc0)
    cl_intel_required_subgroup_size                       in progress (available with RUSTICL_FEATURES=intel)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=6eb0d201034b08fd7bce89ce52eb0009e61d9ce1</guid>
       <pubDate>Fri, 06 Nov 2026 06:00:21 +0000</pubDate>
