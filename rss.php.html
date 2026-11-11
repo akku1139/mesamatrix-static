@@ -5,6 +5,62 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[v3d: Implement GL_OES_texture_buffer]]></title>
+      <link>http://:?commit=62b0e52f875e5cb37b38776908f1b8f85588b385</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 8d7e5fa1a13..3f566203154 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -132,7 +132,7 @@ GL 4.0, GLSL 4.00 --- all DONE: freedreno/a6xx, nvc0, r600, radeonsi, llvmpipe,
+   GL_ARB_sample_shading                                 DONE (freedreno/a5xx+, nv50, panfrost, crocus/gen6+, v3d)
+   GL_ARB_shader_subroutine                              DONE (all drivers)
+   GL_ARB_tessellation_shader                            DONE (freedreno/a6xx)
+-  GL_ARB_texture_buffer_object_rgb32                    DONE (freedreno, softpipe, panfrost, crocus/gen6+)
++  GL_ARB_texture_buffer_object_rgb32                    DONE (freedreno, softpipe, v3d, panfrost, crocus/gen6+)
+   GL_ARB_texture_cube_map_array                         DONE (freedreno/a4xx+, nv50, softpipe, v3d, panfrost, crocus/gen6+)
+   GL_ARB_texture_gather                                 DONE (freedreno, nv50, softpipe, v3d, panfrost)
+   GL_ARB_texture_query_lod                              DONE (freedreno, nv50, softpipe, v3d, panfrost/v9+, crocus/gen5+)
+@@ -291,7 +291,7 @@ GLES3.2, GLSL ES 3.2 -- all DONE: freedreno/a6xx, radeonsi, virgl, llvmpipe, zin
+   GL_OES_shader_multisample_interpolation               DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, v3d)
+   GL_OES_tessellation_shader                            DONE (freedreno/a6xx, all drivers that support GL_ARB_tessellation_shader)
+   GL_OES_texture_border_clamp                           DONE (all drivers)
+-  GL_OES_texture_buffer                                 DONE (freedreno, nvc0, r600, softpipe, panfrost, crocus/gen6+)
++  GL_OES_texture_buffer                                 DONE (freedreno, nvc0, r600, softpipe, v3d, panfrost, crocus/gen6+)
+   GL_OES_texture_cube_map_array                         DONE (freedreno/a4xx+, nvc0, r600, softpipe, v3d)
+   GL_OES_texture_stencil8                               DONE (all drivers that support GL_ARB_texture_stencil8)
+   GL_OES_texture_storage_multisample_2d_array           DONE (all drivers that support GL_ARB_texture_multisample)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=62b0e52f875e5cb37b38776908f1b8f85588b385</guid>
+      <pubDate>Tue, 10 Nov 2026 15:36:27 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[v3d: advertise GLES multisample shader extensions]]></title>
+      <link>http://:?commit=6dee08e79e55f00a8d134b23e38d4accc12d405e</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index a9d1f7e0c5a..8d7e5fa1a13 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -284,11 +284,11 @@ GLES3.2, GLSL ES 3.2 -- all DONE: freedreno/a6xx, radeonsi, virgl, llvmpipe, zin
+   GL_OES_geometry_shader                                DONE (freedreno/a6xx, nvc0, r600, softpipe, v3d)
+   GL_OES_gpu_shader5                                    DONE (freedreno/a6xx, panfrost/v6+, all drivers that support GL_ARB_gpu_shader5)
+   GL_OES_primitive_bounding_box                         DONE (freedreno/a5xx+, nvc0, r600, softpipe, v3d, panfrost)
+-  GL_OES_sample_shading                                 DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, d3d12)
+-  GL_OES_sample_variables                               DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, crocus/gen7+)
++  GL_OES_sample_shading                                 DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, d3d12, v3d)
++  GL_OES_sample_variables                               DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, crocus/gen7+, v3d)
+   GL_OES_shader_image_atomic                            DONE (All drivers that support GLES 3.1)
+   GL_OES_shader_io_blocks                               DONE (All drivers that support GLES 3.1)
+-  GL_OES_shader_multisample_interpolation               DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+)
++  GL_OES_shader_multisample_interpolation               DONE (freedreno/a5xx+, nvc0, r600, panfrost/v6+, v3d)
+   GL_OES_tessellation_shader                            DONE (freedreno/a6xx, all drivers that support GL_ARB_tessellation_shader)
+   GL_OES_texture_border_clamp                           DONE (all drivers)
+   GL_OES_texture_buffer                                 DONE (freedreno, nvc0, r600, softpipe, panfrost, crocus/gen6+)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=6dee08e79e55f00a8d134b23e38d4accc12d405e</guid>
+      <pubDate>Tue, 10 Nov 2026 12:08:26 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[dzn: Support VK_EXT_depth_clip_control]]></title>
       <link>http://:?commit=50cbad92b90341baaa4517582c4f2cf6ddc347c6</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +76,7 @@ index b286ee89dfc..a9d1f7e0c5a 100644
    VK_EXT_depth_clip_enable                              DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv/vc7+, vn)
    VK_EXT_depth_range_unrestricted                       DONE (anv/gen20+, nvk, radv, lvp, vn)
    VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, radv, tu)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=50cbad92b90341baaa4517582c4f2cf6ddc347c6</guid>
       <pubDate>Mon, 09 Nov 2026 21:31:28 +0000</pubDate>
@@ -1629,29 +1686,6 @@ index 8dc3c9897c0..f95d97bc0f3 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=b78fc73dd898a7dfa87448a4b5ff4459a870e21a</guid>
       <pubDate>Thu, 20 Aug 2026 14:11:47 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[tu: Advertise VK_EXT_image_compression_control(_swapchain)]]></title>
-      <link>http://:?commit=40f9c3bdb046c7659065b518335c255670827c45</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index a9f3476a36f..8dc3c9897c0 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -653,8 +653,8 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_EXT_hdr_metadata                                   DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
-   VK_EXT_headless_surface                               DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
-   VK_EXT_image_2d_view_of_3d                            DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
--  VK_EXT_image_compression_control                      DONE (anv/gfx12-, radv)
--  VK_EXT_image_compression_control_swapchain            DONE (radv)
-+  VK_EXT_image_compression_control                      DONE (anv/gfx12-, radv, tu)
-+  VK_EXT_image_compression_control_swapchain            DONE (radv, tu)
-   VK_EXT_image_drm_format_modifier                      DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv/gfx9+, tu, v3dv, vn)
-   VK_EXT_image_sliced_view_of_3d                        DONE (anv, hk, lvp, nvk, panvk, radv/gfx10+, vn)
-   VK_EXT_image_view_min_lod                             DONE (anv, hasvk, hk, nvk, panvk, radv, tu, vn)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=40f9c3bdb046c7659065b518335c255670827c45</guid>
-      <pubDate>Wed, 12 Aug 2026 06:48:23 +0000</pubDate>
     </item>
   </channel>
 </rss>
