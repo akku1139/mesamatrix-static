@@ -5,6 +5,46 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[freedreno/a5xx: advertise framebuffer fetch and advanced blending]]></title>
+      <link>http://:?commit=03ac14ac034340d34c79fcc36b66f2b4739ea5a0</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 18a430ece29..13f455db1bc 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -274,7 +274,7 @@ GLES3.1, GLSL ES 3.1 -- all DONE: freedreno/a5xx+, nvc0, r600, radeonsi, virgl,
+ GLES3.2, GLSL ES 3.2 -- all DONE: freedreno/a6xx, radeonsi, virgl, llvmpipe, zink, iris, crocus/gen7.5+, asahi
+ 
+   GL_EXT_color_buffer_float                             DONE (all drivers)
+-  GL_KHR_blend_equation_advanced                        DONE (freedreno/a6xx, nvc0, panfrost, crocus/gen4.5+, v3d)
++  GL_KHR_blend_equation_advanced                        DONE (freedreno/a5xx+, nvc0, panfrost, crocus/gen4.5+, v3d)
+   GL_KHR_debug                                          DONE (all drivers)
+   GL_KHR_robustness                                     DONE (freedreno, nvc0, panfrost, r600, v3d)
+   GL_KHR_texture_compression_astc_ldr                   DONE (freedreno, r600, v3d, vc4, panfrost, softpipe, lima, crocus/gen6+)
+@@ -321,8 +321,8 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_ARB_texture_buffer_object                          DONE (freedreno, nv50, nvc0, r600, radeonsi, llvmpipe, softpipe, virgl, d3d12, asahi, iris, crocus/gen6+)
+   GL_ARB_texture_filter_minmax                          DONE (freedreno/a6xx, iris/gen9+, llvmpipe, nvc0/gm200+, zink)
+   GL_ARM_shader_framebuffer_fetch_depth_stencil         DONE (llvmpipe)
+-  GL_EXT_shader_framebuffer_fetch                       DONE (freedreno/a6xx, iris/gen9+, llvmpipe, panfrost, virgl, zink, asahi, v3d)
+-  GL_EXT_shader_framebuffer_fetch_non_coherent          DONE (freedreno/a6xx, iris, llvmpipe, panfrost, virgl, zink, asahi, v3d)
++  GL_EXT_shader_framebuffer_fetch                       DONE (freedreno/a5xx+, iris/gen9+, llvmpipe, panfrost, virgl, zink, asahi, v3d)
++  GL_EXT_shader_framebuffer_fetch_non_coherent          DONE (freedreno/a5xx+, iris, llvmpipe, panfrost, virgl, zink, asahi, v3d)
+   GL_EXT_clear_texture                                  DONE (all drivers)
+   GL_EXT_color_buffer_half_float                        DONE (freedreno, iris, llvmpipe, nv50, nvc0, radeonsi, virgl, zink, crocus, asahi, v3d, panfrost)
+   GL_EXT_conservative_depth                             DONE (all drivers that support GLES 3.0+)
+@@ -349,7 +349,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
+   GL_EXT_texture_shadow_lod                             DONE (asahi, crocus/gen6+, iris, llvmpipe, nvc0, radeonsi, r600/evergreen+, virgl)
+   GL_EXT_texture_view                                   DONE (all drivers that support GL_OES_texture_view)
+   GL_EXT_YUV_target                                     DONE (freedreno/a6xx+)
+-  GL_KHR_blend_equation_advanced_coherent               DONE (freedreno/a6xx, llvmpipe, panfrost, zink, asahi, iris/gen9+, v3d)
++  GL_KHR_blend_equation_advanced_coherent               DONE (freedreno/a5xx+, llvmpipe, panfrost, zink, asahi, iris/gen9+, v3d)
+   GL_KHR_robust_buffer_access_behavior                  DONE (panfrost, llvmpipe, virgl)
+   GL_KHR_shader_subgroup                                DONE (radeonsi, zink, asahi, iris/gen9+)
+   GL_KHR_texture_compression_astc_hdr                   DONE (freedreno, panfrost, zink, asahi)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=03ac14ac034340d34c79fcc36b66f2b4739ea5a0</guid>
+      <pubDate>Sat, 14 Nov 2026 10:18:52 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[pvr: advertise VK_KHR_zero_initialize_workgroup_memory]]></title>
       <link>http://:?commit=1d2a95d203edef0f305d94fcd8a14eac8597dc41</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +60,7 @@ index 3f566203154..18a430ece29 100644
    VK_EXT_4444_formats                                   DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, v3dv, vn)
    VK_EXT_extended_dynamic_state                         DONE (anv, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_EXT_extended_dynamic_state2                        DONE (anv, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=1d2a95d203edef0f305d94fcd8a14eac8597dc41</guid>
       <pubDate>Thu, 12 Nov 2026 17:33:14 +0000</pubDate>
