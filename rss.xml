@@ -5,6 +5,56 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[docs/features: claim Vulkan 1.1 and 1.2 for dzn]]></title>
+      <link>http://:?commit=e8f491e85feaf653b74b98e97986df99e9c18a65</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 7405119270b..976c22350d2 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -442,7 +442,7 @@ we DO NOT WANT implementations of these extensions for Mesa.
+ 
+ Vulkan 1.0 -- all DONE: anv, dzn, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn
+ 
+-Vulkan 1.1 -- all DONE: anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn
++Vulkan 1.1 -- all DONE: anv, dzn, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn
+ 
+   VK_KHR_16bit_storage                                  DONE (anv, dzn, hasvk, lvp, nvk, panvk, radv, tu/a650+, v3dv, vn)
+   VK_KHR_bind_memory2                                   DONE (anv, dzn, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+@@ -468,7 +468,7 @@ Vulkan 1.1 -- all DONE: anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn
+   VK_KHR_storage_buffer_storage_class                   DONE (anv, dzn, hasvk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_variable_pointers                              DONE (anv, hasvk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+ 
+-Vulkan 1.2 -- all DONE: anv, hk, nvk, panvk, pvr, tu, vn
++Vulkan 1.2 -- all DONE: anv, dzn, hk, nvk, panvk, pvr, tu, vn
+ 
+   VK_KHR_8bit_storage                                   DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, radv, tu/a750+, v3dv, vn)
+   VK_KHR_buffer_device_address                          DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=e8f491e85feaf653b74b98e97986df99e9c18a65</guid>
+      <pubDate>Tue, 17 Nov 2026 02:40:21 +0000</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[pvr: advertise KHR_vulkan_memory_model]]></title>
+      <link>http://:?commit=8604a0929168ae72b04a19a5b01ad8a3b0d10a42</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 13f455db1bc..7405119270b 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -487,7 +487,7 @@ Vulkan 1.2 -- all DONE: anv, hk, nvk, panvk, pvr, tu, vn
+   VK_KHR_spirv_1_4                                      DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_timeline_semaphore                             DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_KHR_uniform_buffer_standard_layout                 DONE (anv, dzn, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+-  VK_KHR_vulkan_memory_model                            DONE (anv, hasvk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
++  VK_KHR_vulkan_memory_model                            DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_descriptor_indexing                            DONE (anv, dzn, kk, lvp, nvk, panvk/v9+, radv, tu, vn)
+   VK_EXT_host_query_reset                               DONE (anv, hasvk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_sampler_filter_minmax                          DONE (anv, kk/apple10+, lvp, nvk, panvk/v10+, radv, tu, vn)
+
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=8604a0929168ae72b04a19a5b01ad8a3b0d10a42</guid>
+      <pubDate>Mon, 16 Nov 2026 12:34:37 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[freedreno/a5xx: advertise framebuffer fetch and advanced blending]]></title>
       <link>http://:?commit=03ac14ac034340d34c79fcc36b66f2b4739ea5a0</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -40,6 +90,7 @@ index 18a430ece29..13f455db1bc 100644
    GL_KHR_robust_buffer_access_behavior                  DONE (panfrost, llvmpipe, virgl)
    GL_KHR_shader_subgroup                                DONE (radeonsi, zink, asahi, iris/gen9+)
    GL_KHR_texture_compression_astc_hdr                   DONE (freedreno, panfrost, zink, asahi)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=03ac14ac034340d34c79fcc36b66f2b4739ea5a0</guid>
       <pubDate>Sat, 14 Nov 2026 10:18:52 +0000</pubDate>
