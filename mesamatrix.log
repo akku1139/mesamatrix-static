@@ -1371,3 +1371,4 @@
 [2026-11-10T12:50:28.518676+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_KHR_maintenance11.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-11-10T12:50:28.637550+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_vertex_address_binding_unrestricted.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
 [2026-11-21T12:52:10.240385+00:00] cli.parse.WARNING: URL "https://docs.vulkan.org/refpages/latest/refpages/source/VK_EXT_cooperative_matrix_maintenance1.html" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
+[2026-11-26T14:07:31.909004+00:00] cli.parse.WARNING: URL "https://registry.khronos.org/OpenGL/extensions/EXT/EXT_YUV_target.txt" is invalid (reason: "HTTP/1.1 403 Forbidden") [] []
