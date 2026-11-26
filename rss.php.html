@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[pvr: Advertise EXT_external_memory_acquire_unmodified]]></title>
+      <link>http://:?commit=e4b6b1e53e20e4049dbfddac0ee91e643cef083a</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 48510864c2e..3ec047c4748 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -645,7 +645,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_display_surface_counter                        DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+   VK_EXT_dynamic_rendering_unused_attachments           DONE (anv, hk, lvp, nvk, panvk, radv, tu, vn)
+   VK_EXT_extended_dynamic_state3                        DONE (anv, hk, kk, lvp, nvk, panvk, pvr, radv, tu, vn)
+-  VK_EXT_external_memory_acquire_unmodified             DONE (anv, panvk, radv, vn)
++  VK_EXT_external_memory_acquire_unmodified             DONE (anv, panvk, pvr, radv, vn)
+   VK_EXT_external_memory_dma_buf                        DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
+   VK_EXT_external_memory_host                           DONE (anv, dzn, hasvk, kk, lvp, radv)
+   VK_EXT_external_memory_metal                          DONE (kk)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=e4b6b1e53e20e4049dbfddac0ee91e643cef083a</guid>
+      <pubDate>Wed, 25 Nov 2026 12:16:22 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[nvk: VK_EXT_attachment_feedback_loop_dynamic_state]]></title>
       <link>http://:?commit=f8281cfa33e2e752d37b0d619ca53111bbe765de</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index 8647289a7ee..48510864c2e 100644
    VK_EXT_attachment_feedback_loop_layout                DONE (anv, hk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
    VK_EXT_blend_operation_advanced                       DONE (hk, kk, lvp, vn)
    VK_EXT_border_color_swizzle                           DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv/gfx10+, tu, v3dv, vn)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=f8281cfa33e2e752d37b0d619ca53111bbe765de</guid>
       <pubDate>Tue, 24 Nov 2026 17:43:22 +0000</pubDate>
@@ -1917,26 +1938,6 @@ index 627b1a12cc5..28c0db8f937 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=5ff9cc83ab2d64da21ef3eabcd8ae3c05acc0528</guid>
       <pubDate>Fri, 28 Aug 2026 10:02:46 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[docs: Add GL_EXT_YUV_target to features.txt]]></title>
-      <link>http://:?commit=68d09d85d6b264624bdc05b6590b5983505ebc00</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 78bbbf46a98..627b1a12cc5 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -345,6 +345,7 @@ Khronos, ARB, and OES extensions that are not part of any OpenGL or OpenGL ES ve
-   GL_EXT_texture_sRGB_R8                                DONE (all drivers that support GLES 3.0+)
-   GL_EXT_texture_shadow_lod                             DONE (asahi, crocus/gen6+, iris, llvmpipe, nvc0, radeonsi, r600/evergreen+, virgl)
-   GL_EXT_texture_view                                   DONE (all drivers that support GL_OES_texture_view)
-+  GL_EXT_YUV_target                                     DONE (freedreno/a6xx+)
-   GL_KHR_blend_equation_advanced_coherent               DONE (freedreno/a6xx, llvmpipe, panfrost, zink, asahi, iris/gen9+, v3d)
-   GL_KHR_robust_buffer_access_behavior                  DONE (panfrost, llvmpipe, virgl)
-   GL_KHR_shader_subgroup                                DONE (radeonsi, zink, asahi, iris/gen9+)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=68d09d85d6b264624bdc05b6590b5983505ebc00</guid>
-      <pubDate>Wed, 26 Aug 2026 18:15:21 +0000</pubDate>
     </item>
   </channel>
 </rss>
