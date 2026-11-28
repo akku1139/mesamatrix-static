@@ -5,6 +5,26 @@
     <link>http://:</link>
     <description>Show Mesa progress for the OpenGL, OpenGL ES, Vulkan and OpenCL drivers implementations into an easy to read HTML page.</description>
     <item>
+      <title><![CDATA[panvk/v9+: advertise EXT_descriptor_buffer]]></title>
+      <link>http://:?commit=e233d9a0f56c897fcb9f82b7fb4441842db6299c</link>
+      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
+index 3ec047c4748..5d6de3537f3 100644
+--- a/docs/features.txt
++++ b/docs/features.txt
+@@ -633,7 +633,7 @@ Khronos extensions that are not part of any Vulkan version:
+   VK_EXT_depth_clip_control                             DONE (anv, dzn, hasvk, hk, kk, lvp, nvk, panvk, radv, tu, v3dv, vn)
+   VK_EXT_depth_clip_enable                              DONE (anv, hasvk, hk, kk, lvp, nvk, panvk, pvr, radv, tu, v3dv/vc7+, vn)
+   VK_EXT_depth_range_unrestricted                       DONE (anv/gen20+, nvk, radv, lvp, vn)
+-  VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, radv, tu)
++  VK_EXT_descriptor_buffer                              DONE (anv, lvp, nvk, panvk/v9+, radv, tu)
+   VK_EXT_descriptor_heap                                DONE (anv, lvp, radv, vn)
+   VK_EXT_device_address_binding_report                  DONE (anv, panvk, radv, tu)
+   VK_EXT_device_fault                                   DONE (radv)
+</pre>]]></description>
+      <guid isPermaLink="false">http://:?commit=e233d9a0f56c897fcb9f82b7fb4441842db6299c</guid>
+      <pubDate>Fri, 27 Nov 2026 12:46:47 +0000</pubDate>
+    </item>
+    <item>
       <title><![CDATA[pvr: Advertise EXT_external_memory_acquire_unmodified]]></title>
       <link>http://:?commit=e4b6b1e53e20e4049dbfddac0ee91e643cef083a</link>
       <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
@@ -20,6 +40,7 @@ index 48510864c2e..3ec047c4748 100644
    VK_EXT_external_memory_dma_buf                        DONE (anv, hasvk, hk, lvp, nvk, panvk, pvr, radv, tu, v3dv, vn)
    VK_EXT_external_memory_host                           DONE (anv, dzn, hasvk, kk, lvp, radv)
    VK_EXT_external_memory_metal                          DONE (kk)
+
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=e4b6b1e53e20e4049dbfddac0ee91e643cef083a</guid>
       <pubDate>Wed, 25 Nov 2026 12:16:22 +0000</pubDate>
@@ -1917,27 +1938,6 @@ index 28c0db8f937..ec291f26c0b 100644
 </pre>]]></description>
       <guid isPermaLink="false">http://:?commit=bdc3d65bf1f0426093364ad3052090550df899ae</guid>
       <pubDate>Sat, 29 Aug 2026 18:55:15 +0000</pubDate>
-    </item>
-    <item>
-      <title><![CDATA[kk: Enable VK_KHR_deferred_host_operations]]></title>
-      <link>http://:?commit=5ff9cc83ab2d64da21ef3eabcd8ae3c05acc0528</link>
-      <description><![CDATA[<pre>diff --git a/docs/features.txt b/docs/features.txt
-index 627b1a12cc5..28c0db8f937 100644
---- a/docs/features.txt
-+++ b/docs/features.txt
-@@ -544,7 +544,7 @@ Khronos extensions that are not part of any Vulkan version:
-   VK_KHR_compute_shader_derivatives                     DONE (anv, lvp, nvk, panvk/v9+, radv, tu, vn)
-   VK_KHR_cooperative_matrix                             DONE (anv, lvp, nvk/Turing+, panvk/v11+, radv/gfx11+, vn)
-   VK_KHR_copy_memory_indirect                           DONE (anv, lvp, nvk, panvk/v10+, radv/gfx8+)
--  VK_KHR_deferred_host_operations                       DONE (anv, hasvk, lvp, radv, tu, vn)
-+  VK_KHR_deferred_host_operations                       DONE (anv, hasvk, kk, lvp, radv, tu, vn)
-   VK_KHR_depth_clamp_zero_one                           DONE (anv, nvk, panvk, radv, tu, vn)
-   VK_KHR_device_address_commands                        DONE (anv, lvp, nvk, radv)
-   VK_KHR_device_fault                                   DONE (radv)
-
-</pre>]]></description>
-      <guid isPermaLink="false">http://:?commit=5ff9cc83ab2d64da21ef3eabcd8ae3c05acc0528</guid>
-      <pubDate>Fri, 28 Aug 2026 10:02:46 +0000</pubDate>
     </item>
   </channel>
 </rss>
